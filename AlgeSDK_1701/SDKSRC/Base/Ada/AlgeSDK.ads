@@ -1,3 +1,4 @@
+-- now this is online at https://github.com/AcnodeLabs/xalgit.git
 with Interfaces.C; use Interfaces.C;
 with Interfaces.C.Strings; use Interfaces.C.Strings;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
