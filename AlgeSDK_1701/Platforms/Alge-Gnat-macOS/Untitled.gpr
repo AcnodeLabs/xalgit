@@ -13,7 +13,7 @@ project Untitled is
    end Naming;
 
    package Compiler is
-      for Default_Switches ("c++") use ("-std=gnu++11", "-g", "-I/usr/include", "-I/usr/lib", 
+      for Default_Switches ("c++") use ("-std=gnu++11", "-Wno-deprecated-declarations", "-g", "-I/usr/include", "-I/usr/lib", 
          "-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Headers/");
       for Default_Switches ("ada") use ("-g");
    end Compiler;

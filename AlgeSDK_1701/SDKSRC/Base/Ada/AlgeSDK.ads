@@ -36,10 +36,8 @@ with CMD; use CMD;
 --   package GameObjects is new Vectors (Natural, GameObject);
 --   use GameObjects;
 
-
   procedure alPushI (cmd: Int; x: Int; y: Int);
   procedure alPushP (cmd: Int; param1: Strings.chars_ptr; param2: Strings.chars_ptr);
-
 
   procedure alTriangle(size: C_float);
   procedure alLine(x1: C_float; y1: C_float; x2: C_float; y2: C_float);

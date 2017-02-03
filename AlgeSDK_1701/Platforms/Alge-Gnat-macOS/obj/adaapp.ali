@@ -50,7 +50,7 @@ D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
 D adaapp.ads		20160917123540 31069611 adaapp%s
 D adaapp.adb		20160917123356 f30173ea adaapp%b
-D algesdk.ads		20160920153708 30f008d8 algesdk%s
+D algesdk.ads		20170203182504 30f008d8 algesdk%s
 D cmd.ads		20160920153708 94636470 cmd%s
 D interfac.ads		20160516092928 5ab55268 interfaces%s
 D i-c.ads		20160516092926 5421119b interfaces.c%s
@@ -100,9 +100,9 @@ X 18 adaapp.ads
 15i51 i2{23|35I9} 19|74b52
 16U14*DeInit 21i<cpp,AppDeInit>24 19|83b14 86l8 86t14
 X 19 adaapp.adb
-5r4 voyager{20|27R9} 27m7 28m7 29r81 29r108 68r40
-6r4 panel{20|27R9} 31m7 32r86 55r40
-7a4 planets(20|27R9) 36m9 37r70 65r25
+5r4 voyager{20|28R9} 27m7 28m7 29r81 29r108 68r40
+6r4 panel{20|28R9} 31m7 32r86 55r40
+7a4 planets(20|28R9) 36m9 37r70 65r25
 8a4 planet_size(float) 37r99
 9a4 planet_tga(24|47P9) 37r49
 21f4 sc{float} 37r114
@@ -110,33 +110,33 @@ X 19 adaapp.adb
 34i11 n{integer} 36r17 36r40 37r60 37r78 37r111
 50f6 angle1{float} 52m7 62r42
 X 20 algesdk.ads
-7K10*AlgeSDK 18|6w6 6r19 19|1w6 1r19 20|72e14
-9f4*FACTOR_RADIANS_DEGREES{float} 19|52r34
-27R9*GameObject 19|5r14 6r16 7r30 20|33e17
-31i10*modelId{23|35I9} 19|27m15 29r89 31m13 32r92 36m20 37r81 55r46 65r43
+8K10*AlgeSDK 18|6w6 6r19 19|1w6 1r19 20|71e14
+10f4*FACTOR_RADIANS_DEGREES{float} 19|52r34
+28R9*GameObject 19|5r14 6r16 7r30 20|34e17
+32i10*modelId{23|35I9} 19|27m15 29r89 31m13 32r92 36m20 37r81 55r46 65r43
 . 68r48
-32f10*scale{float} 19|28m15 29r116
+33f10*scale{float} 19|28m15 29r116
 40U13*alPushP 19|41s7
-47U13*alLoadModel 19|29s7 32s7 37s9
-48U13*alDrawModel 19|65s7
-48i26 id{23|35I9} 19|65r19
-49U13*alDrawModelTranslateRotate 19|55s7 68s7
-49i41 id{23|35I9} 19|55r34 68r34
-50f44 posx{23|64F9} 19|56r34 69r34
-50f58 posy{23|64F9} 19|56r47 69r47
-50f72 posz{23|64F9} 19|56r60 69r62
-51f44 angle{23|64F9} 19|57r34 70r34
-51f59 x{23|64F9} 19|57r57 70r51
-51f70 y{23|64F9} 19|57r67 70r66
-51f81 z{23|64F9} 19|57r78 70r81
-55U15*alTranslateRotate 19|60s7
-56f44 posx{23|64F9} 19|61r25
-56f58 posy{23|64F9} 19|61r40
-56f72 posz{23|64F9} 19|61r56
-57f44 angle{23|64F9} 19|62r25
-57f59 x{23|64F9} 19|62r52
-57f70 y{23|64F9} 19|62r67
-57f81 z{23|64F9} 19|62r82
+46U13*alLoadModel 19|29s7 32s7 37s9
+47U13*alDrawModel 19|65s7
+47i26 id{23|35I9} 19|65r19
+48U13*alDrawModelTranslateRotate 19|55s7 68s7
+48i41 id{23|35I9} 19|55r34 68r34
+49f44 posx{23|64F9} 19|56r34 69r34
+49f58 posy{23|64F9} 19|56r47 69r47
+49f72 posz{23|64F9} 19|56r60 69r62
+50f44 angle{23|64F9} 19|57r34 70r34
+50f59 x{23|64F9} 19|57r57 70r51
+50f70 y{23|64F9} 19|57r67 70r66
+50f81 z{23|64F9} 19|57r78 70r81
+54U15*alTranslateRotate 19|60s7
+55f44 posx{23|64F9} 19|61r25
+55f58 posy{23|64F9} 19|61r40
+55f72 posz{23|64F9} 19|61r56
+56f44 angle{23|64F9} 19|62r25
+56f59 x{23|64F9} 19|62r52
+56f70 y{23|64F9} 19|62r67
+56f81 z{23|64F9} 19|62r82
 X 21 cmd.ads
 3K9*CMD 18|3w6 3r15 19|41r15 76r20 21|49e8
 13i4*SNDPLAY{23|35I9} 19|41r19

@@ -1,22 +1,22 @@
 [GENERATED OBJECT FILE]
 b__planetsada.o
 [PROJECT FILES]
-/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr
-20170202180132
+/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr
+20170203182957
 [BOUND OBJECT FILES]
-/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/CMD.o
-/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/AlgeSDK.o
-/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/AdaApp.o
-/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/structdefs_h.o
-/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/t-th.o
-/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/t.o
+/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/CMD.o
+/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/AlgeSDK.o
+/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/AdaApp.o
+/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/structdefs_h.o
+/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/t-th.o
+/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/t.o
 [GENERATED SOURCE FILES]
 b__planetsada.ads
 b__planetsada.adb
 b__planetsada.ali
 [RESULTING OPTIONS]
--L/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/
--L/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/
+-L/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/
+-L/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/
 -L/usr/local/gnat/lib/gcc/x86_64-apple-darwin14.5.0/4.9.4/adalib/
 -static
 /usr/local/gnat/lib/gcc/x86_64-apple-darwin14.5.0/4.9.4/adalib/libgnarl.a

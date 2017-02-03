@@ -375,14 +375,14 @@ package body ada_main is
    end adainit;
 
 --  BEGIN Object file/option list
-   --   /Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/CMD.o
-   --   /Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/AlgeSDK.o
-   --   /Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/AdaApp.o
-   --   /Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/structdefs_h.o
-   --   /Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/t-th.o
-   --   /Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/t.o
-   --   -L/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/
-   --   -L/Users/alex/Desktop/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/
+   --   /Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/CMD.o
+   --   /Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/AlgeSDK.o
+   --   /Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/AdaApp.o
+   --   /Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/structdefs_h.o
+   --   /Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/t-th.o
+   --   /Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/t.o
+   --   -L/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/
+   --   -L/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/obj/
    --   -L/usr/local/gnat/lib/gcc/x86_64-apple-darwin14.5.0/4.9.4/adalib/
    --   -static
    --   -lgnarl
