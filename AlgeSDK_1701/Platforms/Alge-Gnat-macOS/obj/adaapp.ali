@@ -16,11 +16,11 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U adaapp%b		adaapp.adb		f2f7ed23 OO PK
+U adaapp%b		adaapp.adb		faafaf0a OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W algesdk%s		algesdk.ads		algesdk.ali
 
-U adaapp%s		adaapp.ads		f255c7ec EE NE OO PK
+U adaapp%s		adaapp.ads		f24f8f55 EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -49,8 +49,8 @@ D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
 D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
 D adaapp.ads		20160917123540 31069611 adaapp%s
-D adaapp.adb		20160917123356 f30173ea adaapp%b
-D algesdk.ads		20170203182504 30f008d8 algesdk%s
+D adaapp.adb		20170203185652 fb43797a adaapp%b
+D algesdk.ads		20170203185558 30ea4061 algesdk%s
 D cmd.ads		20160920153708 94636470 cmd%s
 D interfac.ads		20160516092928 5ab55268 interfaces%s
 D i-c.ads		20160516092926 5421119b interfaces.c%s
@@ -87,67 +87,60 @@ X 14 a-strunb.ads
 X 16 a-textio.ads
 49K13*Text_IO 471e16 18|1w10 1r27
 X 18 adaapp.ads
-8K9*AdaApp 24l5 24e11 19|3b14 88l5 88t11
+8K9*AdaApp 24l5 24e11 19|3b14 82l5 82t11
 10f4*timeVar{23|64F9} 19|46m7 46r18 52r23
 12U14*Init 19i<cpp,AppInit>24 19|24b14 42l8 42t12
 13U14*Update 13>21 20i<cpp,AppUpdate>24 19|44b14 47l8 47t14
 13f21 dt{23|64F9} 19|44b21 46r28
-14U14*Render 18i<cpp,AppRender>24 19|49b14 72l8 72t14
-15U14*ProcessInput 15>28 15>42 15>51 22i<cpp,AppProcessInput>24 19|74b14
-. 81l8 81t20
-15i28 command{23|35I9} 19|74b29 76r10
-15i42 i1{23|35I9} 19|74b43
-15i51 i2{23|35I9} 19|74b52
-16U14*DeInit 21i<cpp,AppDeInit>24 19|83b14 86l8 86t14
+14U14*Render 18i<cpp,AppRender>24 19|49b14 66l8 66t14
+15U14*ProcessInput 15>28 15>42 15>51 22i<cpp,AppProcessInput>24 19|68b14
+. 75l8 75t20
+15i28 command{23|35I9} 19|68b29 70r10
+15i42 i1{23|35I9} 19|68b43
+15i51 i2{23|35I9} 19|68b52
+16U14*DeInit 21i<cpp,AppDeInit>24 19|77b14 80l8 80t14
 X 19 adaapp.adb
-5r4 voyager{20|28R9} 27m7 28m7 29r81 29r108 68r40
+5r4 voyager{20|28R9} 27m7 28m7 29r81 29r108 64r40
 6r4 panel{20|28R9} 31m7 32r86 55r40
-7a4 planets(20|28R9) 36m9 37r70 65r25
+7a4 planets(20|28R9) 36m9 37r70 61r25
 8a4 planet_size(float) 37r99
 9a4 planet_tga(24|47P9) 37r49
 21f4 sc{float} 37r114
-22i4 planetNo{integer} 65r33 77m10 77r22 78r13 78m31
+22i4 planetNo{integer} 61r33 71m10 71r22 72r13 72m31
 34i11 n{integer} 36r17 36r40 37r60 37r78 37r111
-50f6 angle1{float} 52m7 62r42
+50f6 angle1{float} 52m7 58r43
 X 20 algesdk.ads
 8K10*AlgeSDK 18|6w6 6r19 19|1w6 1r19 20|71e14
 10f4*FACTOR_RADIANS_DEGREES{float} 19|52r34
 28R9*GameObject 19|5r14 6r16 7r30 20|34e17
-32i10*modelId{23|35I9} 19|27m15 29r89 31m13 32r92 36m20 37r81 55r46 65r43
-. 68r48
+32i10*modelId{23|35I9} 19|27m15 29r89 31m13 32r92 36m20 37r81 55r46 61r43
+. 64r48
 33f10*scale{float} 19|28m15 29r116
 40U13*alPushP 19|41s7
 46U13*alLoadModel 19|29s7 32s7 37s9
-47U13*alDrawModel 19|65s7
-47i26 id{23|35I9} 19|65r19
-48U13*alDrawModelTranslateRotate 19|55s7 68s7
-48i41 id{23|35I9} 19|55r34 68r34
-49f44 posx{23|64F9} 19|56r34 69r34
-49f58 posy{23|64F9} 19|56r47 69r47
-49f72 posz{23|64F9} 19|56r60 69r62
-50f44 angle{23|64F9} 19|57r34 70r34
-50f59 x{23|64F9} 19|57r57 70r51
-50f70 y{23|64F9} 19|57r67 70r66
-50f81 z{23|64F9} 19|57r78 70r81
-54U15*alTranslateRotate 19|60s7
-55f44 posx{23|64F9} 19|61r25
-55f58 posy{23|64F9} 19|61r40
-55f72 posz{23|64F9} 19|61r56
-56f44 angle{23|64F9} 19|62r25
-56f59 x{23|64F9} 19|62r52
-56f70 y{23|64F9} 19|62r67
-56f81 z{23|64F9} 19|62r82
+47U13*alDrawModel 19|61s7
+47i26 id{23|35I9} 19|61r19
+48U13*alDrawModelTranslateRotate 19|55s7 64s7
+48i41 id{23|35I9} 19|55r34 64r34
+49f66 posy{23|64F9} 19|55r55
+49f89 posz{23|64F9} 19|64r57
+50f44 angle{23|64F9} 19|55r68 64r71
+50f85 y{23|64F9} 19|64r88
+50f104 z{23|64F9} 19|55r84
+54U15*alTranslateRotate 19|58s7
+56f44 angle{23|64F9} 19|58r26
+56f85 y{23|64F9} 19|58r53
 X 21 cmd.ads
-3K9*CMD 18|3w6 3r15 19|41r15 76r20 21|49e8
+3K9*CMD 18|3w6 3r15 19|41r15 70r20 21|49e8
 13i4*SNDPLAY{23|35I9} 19|41r19
-31i4*TOUCH_START{23|35I9} 19|76r24
+31i4*TOUCH_START{23|35I9} 19|70r24
 X 22 interfac.ads
 38K9*Interfaces 18|2r6 2r24 5r6 5r32 19|44r26 22|184e15
 X 23 i-c.ads
 18K20*C 18|2w17 2r35 5r17 5r43 19|44r37 23|230e17
-35I9*int<integer> 18|15r37 15r46 15r55 19|29r77 32r82 36r31 37r66 74r38 74r47
-. 74r56
-64F9*C_float<float> 18|10r14 13r26 19|29r100 37r91 44r39 62r34
+35I9*int<integer> 18|15r37 15r46 15r55 19|29r77 32r82 36r31 37r66 68r38 68r47
+. 68r56
+64F9*C_float<float> 18|10r14 13r26 19|29r100 37r91 44r39 58r35
 X 24 i-cstrin.ads
 36K22*Strings 18|5w19 5r45 24|106e25
 47P9*chars_ptr 19|9r34

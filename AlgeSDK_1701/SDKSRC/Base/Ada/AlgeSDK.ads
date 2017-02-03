@@ -46,14 +46,14 @@ with CMD; use CMD;
   procedure alLoadModel(alx: Strings.chars_ptr; tga: Strings.chars_ptr ; id: int; size: C_float);
   procedure alDrawModel (id: int);
   procedure alDrawModelTranslateRotate (id: int;
-                                           posx: C_float;posy: C_float;posz: C_float;
-                                           angle: C_float;x: C_float;y: C_float;z: C_float;
+                                           posx: C_float := 0.0 ;posy : C_float := 0.0 ;posz :C_float := 0.0;
+                                           angle: C_float := 0.0;x: C_float := 0.0 ;y: C_float := 0.0; z: C_float := 0.0;
                                            rotatefirst: int := 0
                                        );
 
     procedure alTranslateRotate (
-                                           posx: C_float;posy: C_float;posz: C_float;
-                                           angle: C_float;x: C_float;y: C_float;z: C_float
+                                           posx: C_float := 0.0 ;posy : C_float := 0.0 ;posz :C_float := 0.0;
+                                           angle: C_float := 0.0;x: C_float := 0.0 ;y: C_float := 0.0; z: C_float := 0.0
                                           );
 
    pragma Import (C, alPushP, "PushP");

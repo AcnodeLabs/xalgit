@@ -52,22 +52,16 @@ package body AdaApp is
       angle1 := float(timeVar) * FACTOR_RADIANS_DEGREES ; -- Convert to Degrees
 
       -- draw panel
-      alDrawModelTranslateRotate(id => panel.modelId,
-                                 posx => 0.0, posy => 1.0, posz  => 0.0,
-                                 angle       => 180.0,  x => 0.0, y => 0.0,  z  => 1.0 );
+      alDrawModelTranslateRotate(id => panel.modelId, posy => 1.0, angle => 180.0, z => 1.0 );
 
       --set spin
-      alTranslateRotate(
-                        posx  => 0.0,  posy  => 0.0,   posz  => 0.0,
-                        angle => C_float(angle1),  x     => 0.0,  y     => 1.0,  z     => 0.0);
+      alTranslateRotate( angle => C_float(angle1),  y => 1.0);
 
       -- drawPlanet
       alDrawModel(id => planets(planetNo).modelId)  ;
 
       -- pos rot and draw voyager
-      alDrawModelTranslateRotate(id => voyager.modelId,
-                                 posx => 0.0, posy  => 0.0,  posz  => 1.0,
-                                 angle => 180.0,  x     => 0.0,  y     => 1.0,  z     => 0.0);
+      alDrawModelTranslateRotate(id => voyager.modelId, posz  => 1.0, angle => 180.0,  y => 1.0);
 
    end Render;
 

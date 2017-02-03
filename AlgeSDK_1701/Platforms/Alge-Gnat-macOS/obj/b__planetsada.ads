@@ -10,11 +10,11 @@ package ada_main is
    pragma Export (C, adafinal, "adafinal");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#f2f7ed23#;
+   u00001 : constant Version_32 := 16#faafaf0a#;
    pragma Export (C, u00001, "adaappB");
-   u00002 : constant Version_32 := 16#f255c7ec#;
+   u00002 : constant Version_32 := 16#f24f8f55#;
    pragma Export (C, u00002, "adaappS");
-   u00003 : constant Version_32 := 16#8515abf6#;
+   u00003 : constant Version_32 := 16#850fe34f#;
    pragma Export (C, u00003, "algesdkS");
    u00004 : constant Version_32 := 16#c04275eb#;
    pragma Export (C, u00004, "cmdS");
