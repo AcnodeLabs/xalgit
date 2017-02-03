@@ -1,0 +1,170 @@
+V "GNAT Lib v2016"
+A -mmacosx-version-min=10.11.6
+A -gnatA
+A -g
+A -mtune=core2
+A -fPIC
+A -feliminate-unused-debug-symbols
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U algesdk%s		algesdk.ads		8515abf6 EE OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W cmd%s			cmd.ads			cmd.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20160516092928 3ffc8e18 ada%s
+D a-charac.ads		20160516092930 2d3ec45b ada.characters%s
+D a-chlat1.ads		20160516092930 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20160516092926 61e5e089 ada.containers%s
+D a-cgarso.ads		20160516092926 9129bfa8 ada.containers.generic_array_sort%s
+D a-conhel.ads		20160516092928 20298884 ada.containers.helpers%s
+D a-convec.ads		20160516092932 7e2b0fdf ada.containers.vectors%s
+D a-convec.adb		20160516092926 1450cb2b ada.containers.vectors%b
+D a-except.ads		20160516092928 291912d5 ada.exceptions%s
+D a-finali.ads		20160516092930 bf4f806b ada.finalization%s
+D a-iteint.ads		20160516092928 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20160516092928 119b8fb3 ada.streams%s
+D a-string.ads		20160516092930 90ac6797 ada.strings%s
+D a-strmap.ads		20160516092930 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20160516092928 3f91d4c5 ada.strings.unbounded%s
+D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
+D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
+D a-uncdea.ads		20160516092930 f15a5ed1 ada.unchecked_deallocation%s
+D algesdk.ads		20160920153708 30f008d8 algesdk%s
+D cmd.ads		20160920153708 94636470 cmd%s
+D interfac.ads		20160516092928 5ab55268 interfaces%s
+D i-c.ads		20160516092926 5421119b interfaces.c%s
+D i-cstrin.ads		20160516092930 341d0ddf interfaces.c.strings%s
+D system.ads		20160516092930 c3282aa7 system%s
+D s-atocou.ads		20160516092932 b45c2d8d system.atomic_counters%s
+D s-exctab.ads		20160516092930 54135002 system.exception_table%s
+D s-finmas.ads		20160516092930 7811a767 system.finalization_masters%s
+D s-finroo.ads		20160516092930 4ff27390 system.finalization_root%s
+D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
+D s-secsta.ads		20160516092930 86a2856d system.secondary_stack%s
+D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
+D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
+D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
+D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20160516092930 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20160516092928 b16154c2 system.storage_pools%s
+D s-stposu.ads		20160516092926 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20160516092926 aedef97e system.stream_attributes%s
+D s-traent.ads		20160516092928 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
+X 1 ada.ads
+16K9*Ada 19e8 19|3r6 3r33 4r6 4r34
+X 4 a-contai.ads
+16K13*Containers 24e19 19|4r10 4r38
+X 7 a-convec.ads
+46k24*Vectors 518e27 19|4w21
+X 11 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[7|72]>
+X 13 a-string.ads
+16K13*Strings 35e16 19|3r10 3r37
+X 15 a-strunb.ads
+76K21*Unbounded 489e26 19|3w18 3r45
+X 19 algesdk.ads
+7K10*AlgeSDK 72l7 72e14
+9f4*FACTOR_RADIANS_DEGREES{float}
+11R9*f3 14e17 18r19 23r19
+13f10*x{float}
+13f12*y{float}
+13f14*z{float}
+16R9*Position 19e17 29r16
+18r10*values{11R9}
+21R9*Orientation 24e17 30r17
+23r10*values{11R9}
+27R9*GameObject 33e17
+29r10*pos{16R9}
+30r10*rot{21R9}
+31i10*modelId{22|35I9}
+32f10*scale{float}
+39U13*alPushI 39>22 39>32 39>40 61b<c,PushI>22
+39i22 cmd{22|35I9}
+39i32 x{22|35I9}
+39i40 y{22|35I9}
+40U13*alPushP 40>22 40>32 40>59 60b<c,PushP>22
+40i22 cmd{22|35I9}
+40p32 param1{23|47P9}
+40p59 param2{23|47P9}
+43U13*alTriangle 43>24 62b<c,alTriangle>22
+43f24 size{22|64F9}
+44U13*alLine 44>20 44>33 44>46 44>59 63b<c,alLine>22
+44f20 x1{22|64F9}
+44f33 y1{22|64F9}
+44f46 x2{22|64F9}
+44f59 y2{22|64F9}
+45U13*alCircle 45>22 45>33 64b<c,alCircle>22
+45f22 r{22|64F9}
+45i33 segments{22|35I9}
+46U13*alRect 46>20 46>31 65b<c,alRect>22
+46f20 w{22|64F9}
+46f31 h{22|64F9}
+47U13*alLoadModel 47>25 47>49 47>74 47>83 67b<c,alLoadModel>22
+47p25 alx{23|47P9}
+47p49 tga{23|47P9}
+47i74 id{22|35I9}
+47f83 size{22|64F9}
+48U13*alDrawModel 48>26 68b<c,alDrawModel>22
+48i26 id{22|35I9}
+49U13*alDrawModelTranslateRotate 49>41 50>44 50>58 50>72 51>44 51>59 51>70
+. 51>81 52>44 69b<c,alDrawModelTranslateRotate>22
+49i41 id{22|35I9}
+50f44 posx{22|64F9}
+50f58 posy{22|64F9}
+50f72 posz{22|64F9}
+51f44 angle{22|64F9}
+51f59 x{22|64F9}
+51f70 y{22|64F9}
+51f81 z{22|64F9}
+52i44 rotatefirst{22|35I9}
+55U15*alTranslateRotate 56>44 56>58 56>72 57>44 57>59 57>70 57>81 70b<c,alTranslateRotate>22
+56f44 posx{22|64F9}
+56f58 posy{22|64F9}
+56f72 posz{22|64F9}
+57f44 angle{22|64F9}
+57f59 x{22|64F9}
+57f70 y{22|64F9}
+57f81 z{22|64F9}
+X 20 cmd.ads
+3K9*CMD 19|5w6 5r15 20|49e8
+X 21 interfac.ads
+38K9*Interfaces 19|1r6 1r24 2r6 2r32 21|184e15
+X 22 i-c.ads
+18K20*C 19|1w17 1r35 2r17 2r43 22|230e17
+35I9*int<integer> 19|31r20 39r27 39r35 39r43 40r27 45r43 47r78 48r30 49r45
+. 52r57
+64F9*C_float<float> 19|43r30 44r24 44r37 44r50 44r63 45r25 46r23 46r34 47r89
+. 50r50 50r64 50r78 51r51 51r62 51r73 51r84 56r50 56r64 56r78 57r51 57r62
+. 57r73 57r84
+X 23 i-cstrin.ads
+36K22*Strings 19|2w19 2r45 40r40 40r67 47r30 47r54 23|106e25
+47P9*chars_ptr 19|40r48 40r75 47r38 47r62
+
