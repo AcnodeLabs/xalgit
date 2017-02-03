@@ -29,8 +29,8 @@ W system%s		system.ads		system.ali
 D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-except.ads		20160516092928 291912d5 ada.exceptions%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D b__planetsada.ads	20170203183013 0cbf0076 ada_main%s
-D b__planetsada.adb	20170203183013 1ec290f8 ada_main%b
+D b__planetsada.ads	20170203183711 0cbf0076 ada_main%s
+D b__planetsada.adb	20170203183711 1ec290f8 ada_main%b
 D system.ads		20160516092930 c3282aa7 system%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
 D s-restri.ads		20160516092928 1b9d0672 system.restrictions%s

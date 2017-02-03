@@ -3,16 +3,40 @@
   <Project>
     <vfs_file />
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_project />
       <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/SDKSRC/Base/Ada/AlgeSDK.ads</vfs_file>
     </file_marker>
     <file_marker column=" 32" line=" 49" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_project />
       <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/SDKSRC/Base/Ada/AlgeSDK.ads</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 7" line=" 213" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+    <file_marker column=" 7" line=" 213" >
+      <vfs_project />
       <vfs_file>/users/alex/desktop/xalgit/algesdk_1701/platforms/alge-gnat-macos/src/alge-gnat-mac.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/src/PlanetsAda.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/src/alge-gnat-mac.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >
