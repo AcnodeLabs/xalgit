@@ -16,7 +16,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U adaapp%b		adaapp.adb		faafaf0a OO PK
+U adaapp%b		adaapp.adb		2a384fa0 OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W algesdk%s		algesdk.ads		algesdk.ali
 
@@ -49,7 +49,7 @@ D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
 D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
 D adaapp.ads		20160917123540 31069611 adaapp%s
-D adaapp.adb		20170203185652 fb43797a adaapp%b
+D adaapp.adb		20170204184038 2bd499d0 adaapp%b
 D algesdk.ads		20170203185558 30ea4061 algesdk%s
 D cmd.ads		20160920153708 94636470 cmd%s
 D interfac.ads		20160516092928 5ab55268 interfaces%s
@@ -132,7 +132,7 @@ X 20 algesdk.ads
 56f85 y{23|64F9} 19|58r53
 X 21 cmd.ads
 3K9*CMD 18|3w6 3r15 19|41r15 70r20 21|49e8
-13i4*SNDPLAY{23|35I9} 19|41r19
+8i4*SNDSET{23|35I9} 19|41r19
 31i4*TOUCH_START{23|35I9} 19|70r24
 X 22 interfac.ads
 38K9*Interfaces 18|2r6 2r24 5r6 5r32 19|44r26 22|184e15
@@ -144,7 +144,7 @@ X 23 i-c.ads
 X 24 i-cstrin.ads
 36K22*Strings 18|5w19 5r45 24|106e25
 47P9*chars_ptr 19|9r34
-52p4*Null_Ptr{47P9} 19|41r53
+52p4*Null_Ptr{47P9} 19|41r55
 60V13*New_String{47P9} 19|10s46 11s46 12s46 13s46 14s46 15s46 16s46 17s46
-. 18s46 29s19 29s48 32s19 32s50 37s21 41s28
+. 18s46 29s19 29s48 32s19 32s50 37s21 41s27
 

@@ -11,11 +11,13 @@
 #include "CANDIDATE.h"
 #include "../../../SDKSRC/Base/CBaseV1_2.h"
 #include <GLUT/glut.h>
+#include <AL/alut.h>
+
 //#include <glut.h>
 #include <stdio.h>
 
-//#include <OpenAL/include/al.h>
-//#include <OpenAL/include/alc.h>
+#include <OpenAL/al.h>
+#include <OpenAL/alc.h>
 
 //http://www.e38.org/onboardmonitor.pdf //bmw
 #define kWindowScale  3
@@ -37,7 +39,7 @@ Timer time1;
 float deltaT;
 float lastTime;
 float aX, aY, aZ;
-/*
+
 ALsizei nAL;
 #define NUM_BUFFERS_SOURCES 16
 ALuint alSources[NUM_BUFFERS_SOURCES];
@@ -87,48 +89,56 @@ void deInitAL() {
         //Release context
         alcDestroyContext(context);
         //Close device
-        alcCloseDevice(device);
+  alcCloseDevice(device);
+  alutExit();
 }
-*/
+
 void sndSet(char* filename, int id, int loops) {
-//openal//    ALenum  error = AL_NO_ERROR;
-//openal//	ALenum  format;
-//openal//	ALvoid* data;
-//openal//	ALsizei size;
-//openal//	ALsizei freq;
+    ALenum  error = AL_NO_ERROR;
+	ALenum  format;
+	ALvoid* data;
+	ALsizei size;
+	ALsizei freq;
 	
     // Turn Looping ON
-//openal//    if (loops>0) alSourcei(alSources[id], AL_LOOPING, AL_TRUE);
+    if (loops>0) alSourcei(alSources[id], AL_LOOPING, AL_TRUE);
     // Set Source Position
-//openal//    alSourcefv(alSources[id], AL_POSITION, alPosition);
+     alSourcefv(alSources[id], AL_POSITION, alPosition);
     // Set Source Reference Distance
-//openal//    alSourcef(alSources[id],AL_REFERENCE_DISTANCE, 5.0f);
+    alSourcef(alSources[id],AL_REFERENCE_DISTANCE, 5.0f);
      
     char filespec[256];
     sprintf(filespec, "%s/%s", app.rm.resourcepath, filename);
+  printf("Hello World");
   
+   alBuffers[id] = alutCreateBufferHelloWorld ();
+
+
   /*
   CFStringRef f1 = CFStringCreateWithFileSystemRepresentation(kCFAllocatorDefault, filespec);
     CFURLRef fileURL = CFURLCreateWithString(kCFAllocatorDefault, (CFStringRef)f1, NULL);
     data = MyGetOpenALAudioData(fileURL, &size, &format, &freq);
     CFRelease(fileURL);
    */
+  // ALuint i1 = alutCreateBufferHelloWorld ();//alutCreateBufferFromFile (filespec);
   
-//openal//    alBufferData(alBuffers[id], format, data, size, freq);
+
+  
+ //   alBufferData(alBuffers[id], format, data, size, freq);
 		
     // Release the audio data
- //openal//   free(data);
+  // free(data);
     
 
     // attach OpenAL Buffer to OpenAL Source
-//openal//    alSourcei(alSources[id], AL_BUFFER, alBuffers[id]);
- //openal//   alSourcePlay(alSources[id]);
+   alSourcei(alSources[id], AL_BUFFER, alBuffers[id]);
+   alSourcePlay(alSources[id]);
     
 }
 
 void sndPlay(int id) {
-    // Start Playing Sound
- //openal//   alSourcePlay(alSources[id]);
+    printf("\nStart Playing Sound #%d", id);
+    alSourcePlay(alSources[id]);
 }
 
 
@@ -190,7 +200,7 @@ extern "C" void alTranslateRotate( float posx , float posy, float posz,
 void processOutput() {
     PEG::CMD* c = app.output.pull();
     
-    
+ 
     switch (c->command) {
         case CMD_SNDSET0:
         case CMD_SNDSET1:
@@ -302,7 +312,7 @@ static void HandleReshape( const int width, const int height )
 
 static void exitIt() {
     app.Deinit();
- //openal//   deInitAL();
+    deInitAL();
     exit(0);
 }
 
@@ -363,11 +373,23 @@ void FindAppName() {
 }
 
 
+
 int main( int argc, char** argv )
 {
     
+  ALuint helloBuffer, helloSource;
+  alutInit (&argc, argv);
+  helloBuffer = alutCreateBufferHelloWorld ();
+  alGenSources (1, &helloSource);
+  alSourcei (helloSource, AL_BUFFER, helloBuffer);
+  alSourcePlay (helloSource);
+  alutSleep (1);
+  alutExit ();
+  return EXIT_SUCCESS;
+  
    glutInit( &argc, argv );
-    
+  alutInit( &argc, argv );
+   
     glutInitWindowSize( kWindowWidth, kWindowHeight );
     
     glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH );
@@ -403,7 +425,7 @@ int main( int argc, char** argv )
        char datadir[256];
     sprintf(datadir, "%s.app/Data",app.rm.resourcepath);// (char *) APP_SUBDIR);
     strcpy(app.rm.resourcepath, datadir);
- //openal//   initAL(app.rm.resourcepath);
+   initAL(app.rm.resourcepath);
    app.Init(app.rm.resourcepath);
    appintialized = true;
   
@@ -416,6 +438,7 @@ int main( int argc, char** argv )
     
     glutMainLoop( );
     app.Deinit();
+   alutExit();
     return 0;
 }
 

@@ -38,7 +38,7 @@ package body AdaApp is
       end loop;
 
       -- Load Sounds
-      alPushP(CMD.SNDPLAY, New_String("cosmos.mp3"),Null_Ptr);
+      alPushP(CMD.SNDSET, New_String("anim_land.wav"),Null_Ptr);
    end Init;
 
    procedure Update(dt : Interfaces.C.C_float) is

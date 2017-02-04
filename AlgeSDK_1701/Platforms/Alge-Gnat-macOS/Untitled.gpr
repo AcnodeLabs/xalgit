@@ -20,7 +20,12 @@ project Untitled is
 
    package Linker is
       for Default_Switches ("c++") use ("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib", 
-         "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib", "/System/Library/Frameworks/GLUT.framework/Versions/A/GLUT");
+                                        "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib", 
+                                        "/System/Library/Frameworks/GLUT.framework/Versions/A/GLUT",
+                                        "/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL",
+                                        "/usr/local/Cellar/freealut/1.1.0/lib/libalut.0.dylib",
+                                        "-lpthread"
+                                       );
       for Default_Switches ("ada") use ("-g");
    end Linker;
 
