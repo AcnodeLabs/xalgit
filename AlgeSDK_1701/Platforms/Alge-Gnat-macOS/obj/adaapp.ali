@@ -16,7 +16,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U adaapp%b		adaapp.adb		2a384fa0 OO PK
+U adaapp%b		adaapp.adb		2fe518e4 OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W algesdk%s		algesdk.ads		algesdk.ali
 
@@ -49,7 +49,7 @@ D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
 D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
 D adaapp.ads		20160917123540 31069611 adaapp%s
-D adaapp.adb		20170204184038 2bd499d0 adaapp%b
+D adaapp.adb		20170206173038 2e09ce94 adaapp%b
 D algesdk.ads		20170203185558 30ea4061 algesdk%s
 D cmd.ads		20160920153708 94636470 cmd%s
 D interfac.ads		20160516092928 5ab55268 interfaces%s
@@ -144,7 +144,7 @@ X 23 i-c.ads
 X 24 i-cstrin.ads
 36K22*Strings 18|5w19 5r45 24|106e25
 47P9*chars_ptr 19|9r34
-52p4*Null_Ptr{47P9} 19|41r55
+52p4*Null_Ptr{47P9} 19|41r52
 60V13*New_String{47P9} 19|10s46 11s46 12s46 13s46 14s46 15s46 16s46 17s46
 . 18s46 29s19 29s48 32s19 32s50 37s21 41s27
 

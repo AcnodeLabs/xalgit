@@ -93,6 +93,7 @@ void deInitAL() {
   alutExit();
 }
 
+
 void sndSet(char* filename, int id, int loops) {
     ALenum  error = AL_NO_ERROR;
 	ALenum  format;
@@ -109,10 +110,17 @@ void sndSet(char* filename, int id, int loops) {
      
     char filespec[256];
     sprintf(filespec, "%s/%s", app.rm.resourcepath, filename);
-  printf("Hello World");
+    printf("\nSound File :%s ", filespec);
   
-   alBuffers[id] = alutCreateBufferHelloWorld ();
-
+    alBuffers[id] = alutCreateBufferFromFile(filespec);
+      if (alBuffers[id] == AL_NONE)
+    {
+      error = alutGetError ();
+      fprintf (stderr, "Error loading file: '%s'\n",
+               alutGetErrorString (error));
+      alutExit ();
+      exit (EXIT_FAILURE);
+    }
 
   /*
   CFStringRef f1 = CFStringCreateWithFileSystemRepresentation(kCFAllocatorDefault, filespec);
@@ -377,18 +385,20 @@ void FindAppName() {
 int main( int argc, char** argv )
 {
     
-  ALuint helloBuffer, helloSource;
-  alutInit (&argc, argv);
-  helloBuffer = alutCreateBufferHelloWorld ();
-  alGenSources (1, &helloSource);
-  alSourcei (helloSource, AL_BUFFER, helloBuffer);
-  alSourcePlay (helloSource);
-  alutSleep (1);
-  alutExit ();
-  return EXIT_SUCCESS;
+/*   ALuint helloBuffer, helloSource; */
+/*   alutInit (&argc, argv); */
+/*   helloBuffer = alutCreateBufferHelloWorld (); */
+/*   alGenSources (1, &helloSource); */
+/*   printf("playing"); */
+/*   alSourcei (helloSource, AL_BUFFER, helloBuffer); */
+/*   alSourcePlay (helloSource); */
+/*   alutSleep (4); */
+/*   printf(" exiting"); */
+/*   alutExit (); */
+/*   return EXIT_SUCCESS; */
   
    glutInit( &argc, argv );
-  alutInit( &argc, argv );
+   alutInit( &argc, argv );
    
     glutInitWindowSize( kWindowWidth, kWindowHeight );
     

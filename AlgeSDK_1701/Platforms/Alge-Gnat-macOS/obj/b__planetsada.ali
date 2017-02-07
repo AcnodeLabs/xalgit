@@ -17,20 +17,20 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U ada_main%b		b__planetsada.adb	dbce563b NE OO PK IL
+U ada_main%b		b__planetsada.adb	aacda74f NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__planetsada.ads	34a0f8c3 EE NE OO PK IL
+U ada_main%s		b__planetsada.ads	45a309b7 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-except.ads		20160516092928 291912d5 ada.exceptions%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D b__planetsada.ads	20170204184610 f788d264 ada_main%s
-D b__planetsada.adb	20170204184610 1ec290f8 ada_main%b
+D b__planetsada.ads	20170206173040 868b2310 ada_main%s
+D b__planetsada.adb	20170206173040 1ec290f8 ada_main%b
 D system.ads		20160516092930 c3282aa7 system%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
 D s-restri.ads		20160516092928 1b9d0672 system.restrictions%s
