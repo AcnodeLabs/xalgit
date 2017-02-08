@@ -1,5 +1,5 @@
 with AlgeSDK; use AlgeSDK;
-
+with Text_IO; use Text_IO;
 package body AdaApp is
 
    voyager : GameObject;
@@ -21,6 +21,15 @@ package body AdaApp is
    sc : float := 0.7  * 0.0001;
    planetNo : Integer := 0;
 
+   hitCursor : HitList.Cursor;
+   hitBounds : HitList.Vector;
+
+   boundsOfBtn1 : FloatBounds := (1, 0.4,0.1,0.4,0.5);
+   boundsOfBtn2 : FloatBounds := (2, 0.4,0.5,0.4,0.5);
+   boundsOfBtn3 : FloatBounds := (3, 0.4,0.5,0.4,0.5);
+   boundsOfBtn4 : FloatBounds := (4, 0.4,0.5,0.4,0.5);
+   boundsOfPlnt : FloatBounds := (5, 0.4,0.5,0.4,0.5);
+
    procedure Init is
    begin
 
@@ -39,6 +48,13 @@ package body AdaApp is
 
       -- Load Sounds
       alPushP(CMD.SNDSET, New_String("cosmos.wav"),Null_Ptr);
+
+      hitBounds.Append(boundsOfBtn1);
+      hitBounds.Append(boundsOfBtn2);
+      hitBounds.Append(boundsOfBtn3);
+      hitBounds.Append(boundsOfBtn4);
+      hitBounds.Append(boundsOfPlnt);
+
    end Init;
 
    procedure Update(dt : Interfaces.C.C_float) is
@@ -66,13 +82,38 @@ package body AdaApp is
    end Render;
 
    procedure ProcessInput  (command: Int; i1: Int; i2: Int) is
+      spit : Boolean := False;
    begin
+
+      spit := False;
+
+      if command = CMD.SCREENSIZE then
+         spit := True;
+      end if;
+
+
       if command = CMD.TOUCH_START then
          planetNo := planetNo + 1;
          if planetNo > 8 then planetNo := 0; end if;
-
+         spit := True;
       end if;
+
+      Text_IO.Put_Line(Integer'Image(Standard.Integer(command)) & "=(" & Integer'Image(Standard.Integer(i1)) & "," & Integer'Image(Standard.Integer(i2)) & ")");
+
    end ProcessInput;
+
+   function HitTest (command: Int; i1: Int; i2: Int) return Int is
+   begin
+      hitCursor := hitBounds.First;
+
+--        while hitCursor loop
+--          Ada.Integer_Text_IO.Put(hitBounds.Element(hitCursor));
+--          Ada.Text_IO.New_Line;
+--          hitBounds.Next(hitCursor);
+--        end loop;
+      return 0;
+   end HitTest;
+
 
    procedure DeInit is
    begin
