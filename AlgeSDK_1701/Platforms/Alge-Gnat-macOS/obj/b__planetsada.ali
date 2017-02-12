@@ -17,20 +17,20 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U ada_main%b		b__planetsada.adb	f3eaf182 NE OO PK IL
+U ada_main%b		b__planetsada.adb	f56eb4eb NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__planetsada.ads	a9250937 EE NE OO PK IL
+U ada_main%s		b__planetsada.ads	a8db3eb8 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-except.ads		20160516092928 291912d5 ada.exceptions%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D b__planetsada.ads	20170208183950 6a0d2390 ada_main%s
-D b__planetsada.adb	20170208183950 ab63c6b5 ada_main%b
+D b__planetsada.ads	20170212192207 6bf3141f ada_main%s
+D b__planetsada.adb	20170212192207 ac19b453 ada_main%b
 D system.ads		20160516092930 c3282aa7 system%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
 D s-restri.ads		20160516092928 1b9d0672 system.restrictions%s
@@ -260,32 +260,32 @@ X 4 b__planetsada.ads
 401m4*u00195{12M9} 402r22
 403m4*u00196{12M9} 404r22
 X 5 b__planetsada.adb
-12i4 E096{short_integer} 12m46 12r46 344r10 347m7 347r15
-13i4 E021{short_integer} 13m46 13r46 259r10 340r10 343m7 343r15
-14i4 E031{short_integer} 14m46 14r46 262r10 265m7 265r15
-15i4 E100{short_integer} 15m46 15r46 266r10 269m7 269r15
-16i4 E084{short_integer} 16m46 16r46 270r10 273m7 273r15
+12i4 E097{short_integer} 12m46 12r46 344r10 347m7 347r15
+13i4 E018{short_integer} 13m46 13r46 259r10 340r10 343m7 343r15
+14i4 E016{short_integer} 14m46 14r46 262r10 265m7 265r15
+15i4 E013{short_integer} 15m46 15r46 266r10 269m7 269r15
+16i4 E085{short_integer} 16m46 16r46 270r10 273m7 273r15
 17i4 E105{short_integer} 17m46 17r46 274r10 277m7 277r15
 18i4 E111{short_integer} 18m46 18r46 278r10 339m7 339r15
-19i4 E013{short_integer} 19m46 19r46 281r10 335r10 338m7 338r15
-20i4 E083{short_integer} 20m46 20r46 284r10 287m7 287r15
-21i4 E094{short_integer} 21m46 21r46 288r10 334m7 334r15
+19i4 E058{short_integer} 19m46 19r46 281r10 335r10 338m7 338r15
+20i4 E084{short_integer} 20m46 20r46 284r10 287m7 287r15
+21i4 E095{short_integer} 21m46 21r46 288r10 334m7 334r15
 22i4 E135{short_integer} 22m46 22r46 291r10 333m7 333r15
-23i4 E033{short_integer} 23m46 23r46 294r10 297m7 297r15
-24i4 E099{short_integer} 24m46 24r46 298r10 301m7 301r15
-25i4 E089{short_integer} 25m46 25r46 110m10 110r18 111r13 329r10 332m7 332r15
-26i4 E092{short_integer} 26m46 26r46 302r10 305m7 305r15
-27i4 E090{short_integer} 27m46 27r46 306r10 309m7 309r15
+23i4 E030{short_integer} 23m46 23r46 294r10 297m7 297r15
+24i4 E100{short_integer} 24m46 24r46 298r10 301m7 301r15
+25i4 E090{short_integer} 25m46 25r46 110m10 110r18 111r13 329r10 332m7 332r15
+26i4 E093{short_integer} 26m46 26r46 302r10 305m7 305r15
+27i4 E091{short_integer} 27m46 27r46 306r10 309m7 309r15
 28i4 E129{short_integer} 28m46 28r46 310r10 313m7 313r15
 29i4 E123{short_integer} 29m46 29r46 115m7 115r15 138r13 314r10 325r10 328m7
 . 328r15
 30i4 E121{short_integer} 30m46 30r46 116m7 116r15 130r13 317r10 324m7 324r15
 31i4 E137{short_integer} 31m46 31r46 117m7 117r15 122r13 320r10 323m7 323r15
-32i4 E025{short_integer} 32m46 32r46 348r10 351m7 351r15
+32i4 E022{short_integer} 32m46 32r46 348r10 351m7 351r15
 33i4 E107{short_integer} 33m46 33r46 97m7 97r15 102r13 352r10 355m7 355r15
 34i4 E172{short_integer} 34m46 34r46 356r10 359m7 359r15
 35i4 E196{short_integer} 35m46 35r46 360r10 363r10 366m7 366r15
-36i4 E081{short_integer} 36m46 36r46 88m7 88r15 93r13 367r10 370r10 373m7
+36i4 E082{short_integer} 36m46 36r46 88m7 88r15 93r13 367r10 370r10 373m7
 . 373r15
 37i4 E180{short_integer} 37m46 37r46 374r10 377m7 377r15
 38i4 E184{short_integer} 38m46 38r46 79m7 79r15 84r13 378r10 381m7 381r15

@@ -1,5 +1,8 @@
 with AlgeSDK; use AlgeSDK;
 with Text_IO; use Text_IO;
+with Ada.Containers.Vectors;
+with AdaApp; use AdaApp;
+
 package body AdaApp is
 
    voyager : GameObject;
@@ -20,14 +23,20 @@ package body AdaApp is
 
    sc : float := 0.7  * 0.0001;
    planetNo : Integer := 0;
+   iUnassigned : constant Int := -1;
+   fUnassigned : constant Float := -1.0;
 
    hitCursor : HitList.Cursor;
    hitBounds : HitList.Vector;
+   touchedX : Float := fUnassigned;
+   touchedY : Float := fUnassigned;
+   screenX  : Int := iUnassigned;
+   screenY  : Int := iUnassigned;
 
-   boundsOfBtn1 : FloatBounds := (1, 0.4,0.1,0.4,0.5);
+   boundsOfBtn1 : FloatBounds := (1, 0.01,0.99,0.01,0.99);
    boundsOfBtn2 : FloatBounds := (2, 0.4,0.5,0.4,0.5);
    boundsOfBtn3 : FloatBounds := (3, 0.4,0.5,0.4,0.5);
-   boundsOfBtn4 : FloatBounds := (4, 0.4,0.5,0.4,0.5);
+   boundsOfBtn4 : FloatBounds := (4, 0.01,0.99,0.01,0.99);
    boundsOfPlnt : FloatBounds := (5, 0.4,0.5,0.4,0.5);
 
    procedure Init is
@@ -47,7 +56,7 @@ package body AdaApp is
       end loop;
 
       -- Load Sounds
-      alPushP(CMD.SNDSET, New_String("cosmos.wav"),Null_Ptr);
+  --    alPushP(CMD.SNDSET, New_String("cosmos.wav"),Null_Ptr);
 
       hitBounds.Append(boundsOfBtn1);
       hitBounds.Append(boundsOfBtn2);
@@ -83,35 +92,48 @@ package body AdaApp is
 
    procedure ProcessInput  (command: Int; i1: Int; i2: Int) is
       spit : Boolean := False;
+
    begin
 
       spit := False;
 
       if command = CMD.SCREENSIZE then
          spit := True;
+         screenX := i1;
+         screenY := i2;
       end if;
 
+      if command = CMD.TOUCH_END then
+         touchedX := fUnassigned;
+         touchedY := fUnassigned;
+      end if;
 
       if command = CMD.TOUCH_START then
          planetNo := planetNo + 1;
          if planetNo > 8 then planetNo := 0; end if;
          spit := True;
+
+         touchedX := Float(i1)/ Float(screenX);
+         touchedY := Float(i2)/ Float(screenY);
+
+         Iterate(Container => hitBounds,
+                 Process   => HitTest'Access);
       end if;
 
       Text_IO.Put_Line(Integer'Image(Standard.Integer(command)) & "=(" & Integer'Image(Standard.Integer(i1)) & "," & Integer'Image(Standard.Integer(i2)) & ")");
 
    end ProcessInput;
 
-   function HitTest (command: Int; i1: Int; i2: Int) return Int is
+   procedure HitTest (aCursor : Cursor)  is
+    aBound : constant FloatBounds := Element (Position => aCursor);
    begin
-      hitCursor := hitBounds.First;
 
---        while hitCursor loop
---          Ada.Integer_Text_IO.Put(hitBounds.Element(hitCursor));
---          Ada.Text_IO.New_Line;
---          hitBounds.Next(hitCursor);
---        end loop;
-      return 0;
+      if (touchedX >= aBound.xMin and touchedX <= aBound.xMax and
+         touchedY >= aBound.yMin and touchedY <= aBound.yMax
+         ) then
+         Text_IO.Put_Line("Hit" & Integer'Image(Standard.Integer(aBound.name)));
+      end if;
+
    end HitTest;
 
 

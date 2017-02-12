@@ -4,7 +4,8 @@ with cmd; use cmd;
 with Ada.Strings.Unbounded;
 with Interfaces.C.Strings; use Interfaces.C.Strings;
 with AlgeSDK; use AlgeSDK;
-with Ada.Containers.Vectors; use Ada.Containers;
+with Ada.Containers; use Ada.Containers;
+with Ada.Containers.Vectors;
 
 package AdaApp is
 
@@ -24,13 +25,15 @@ package AdaApp is
    package HitList is new Vectors(Index_Type   => Natural,
                                   Element_Type => FloatBounds);
 
+   use HitList;
+
    procedure Init;
    procedure Update(dt : C_float);
    procedure Render;
    procedure ProcessInput (command: Int; i1: Int; i2: Int);
    procedure DeInit;
 
-   function HitTest (command: Int; i1: Int; i2: Int) return Int;
+   procedure HitTest (aCursor : Cursor);
 
 
    pragma export (CPP, Render, "AppRender");
