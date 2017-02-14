@@ -4,7 +4,8 @@ project Untitled is
    for Object_Dir use "obj";
    for Main use ("PlanetsAda.cpp");
    for Languages use ("Ada", "C++");
-   for Source_Files use ("AdaApp.adb", "AdaApp.ads", "PlanetsAda.cpp", "alge-gnat-mac.cpp", "AlgeSDK.ads", "CANDIDATE.h", "CMD.ads", "resource.h", "structdefs_h.ads", "t.adb", "t.ads", "Timer.cpp", "Timer.h", "t-th.adb", "t-th.ads");
+   for Source_Files use ("AdaApp.adb", "AdaApp.ads", "alge-gnat-mac.cpp", "AlgeSDK.ads", "CANDIDATE.h", "CMD.ads", "hittestcode.adb", "hittestcode.ads", "PlanetsAda.cpp", "resource.h", "structdefs_h.ads", "t.adb", "t.ads", "Timer.cpp", "Timer.h", 
+      "t-th.adb", "t-th.ads");
 
    package Naming is
       for Spec_Suffix ("c++") use ".h";
@@ -20,12 +21,8 @@ project Untitled is
 
    package Linker is
       for Default_Switches ("c++") use ("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib", 
-                                        "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib", 
-                                        "/System/Library/Frameworks/GLUT.framework/Versions/A/GLUT",
-                                        "/usr/local/Cellar/freealut/1.1.0/lib/libalut.0.dylib",
-                                        "/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL",
-                                        "-lpthread"
-                                       );
+         "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib", "/System/Library/Frameworks/GLUT.framework/Versions/A/GLUT", 
+         "/usr/local/Cellar/freealut/1.1.0/lib/libalut.0.dylib", "/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL", "-lpthread");
       for Default_Switches ("ada") use ("-g");
    end Linker;
 

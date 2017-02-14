@@ -1,7 +1,4 @@
-with AlgeSDK; use AlgeSDK;
-with Text_IO; use Text_IO;
-with Ada.Containers.Vectors;
-with AdaApp; use AdaApp;
+
 
 package body AdaApp is
 
@@ -24,20 +21,9 @@ package body AdaApp is
    sc : float := 0.7  * 0.0001;
    planetNo : Integer := 0;
    iUnassigned : constant Int := -1;
-   fUnassigned : constant Float := -1.0;
 
-   hitCursor : HitList.Cursor;
-   hitBounds : HitList.Vector;
-   touchedX : Float := fUnassigned;
-   touchedY : Float := fUnassigned;
    screenX  : Int := iUnassigned;
    screenY  : Int := iUnassigned;
-
-   boundsOfBtn1 : FloatBounds := (1, 0.01,0.99,0.01,0.99);
-   boundsOfBtn2 : FloatBounds := (2, 0.4,0.5,0.4,0.5);
-   boundsOfBtn3 : FloatBounds := (3, 0.4,0.5,0.4,0.5);
-   boundsOfBtn4 : FloatBounds := (4, 0.01,0.99,0.01,0.99);
-   boundsOfPlnt : FloatBounds := (5, 0.4,0.5,0.4,0.5);
 
    procedure Init is
    begin
@@ -58,11 +44,13 @@ package body AdaApp is
       -- Load Sounds
   --    alPushP(CMD.SNDSET, New_String("cosmos.wav"),Null_Ptr);
 
-      hitBounds.Append(boundsOfBtn1);
-      hitBounds.Append(boundsOfBtn2);
-      hitBounds.Append(boundsOfBtn3);
-      hitBounds.Append(boundsOfBtn4);
-      hitBounds.Append(boundsOfPlnt);
+      Text_IO.Put_Line("Hit Init 5 Hotspots");
+   -- https://docs.google.com/spreadsheets/d/1LnzLCQDEV4u01F0RhHSR2k0h-F8e-l5XopcBfGvRc1g/edit#gid=0
+      hitBounds.Append((1, 0.32,0.40, 0.04,0.14)); --btn1
+      hitBounds.Append((2, 0.42,0.49, 0.04,0.14)); --btn2
+      hitBounds.Append((3, 0.51,0.59, 0.04,0.14)); --btn3
+      hitBounds.Append((4, 0.60,0.68, 0.04,0.14)); --btn4
+      hitBounds.Append((10, 0.4,0.6,0.3,0.7));     --planet
 
    end Init;
 
@@ -92,7 +80,7 @@ package body AdaApp is
 
    procedure ProcessInput  (command: Int; i1: Int; i2: Int) is
       spit : Boolean := False;
-
+      hitId: Integer := 0;
    begin
 
       spit := False;
@@ -104,37 +92,24 @@ package body AdaApp is
       end if;
 
       if command = CMD.TOUCH_END then
-         touchedX := fUnassigned;
-         touchedY := fUnassigned;
+        --touchedX := fUnassigned;
+        --touchedY := fUnassigned;
+        null;
       end if;
 
       if command = CMD.TOUCH_START then
-         planetNo := planetNo + 1;
-         if planetNo > 8 then planetNo := 0; end if;
-         spit := True;
 
-         touchedX := Float(i1)/ Float(screenX);
-         touchedY := Float(i2)/ Float(screenY);
+--     planetNo := planetNo + 1;
+--     if planetNo > 8 then planetNo := 0; end if;
 
-         Iterate(Container => hitBounds,
-                 Process   => HitTest'Access);
+         hitId :=
+           HitTestCode.DoIt(Float(i1)/ Float(1190), Float(i2)/ Float(700));
+         Text_IO.Put_Line("Hit" & Integer'Image(Standard.Integer(hitID)));
       end if;
 
       Text_IO.Put_Line(Integer'Image(Standard.Integer(command)) & "=(" & Integer'Image(Standard.Integer(i1)) & "," & Integer'Image(Standard.Integer(i2)) & ")");
 
    end ProcessInput;
-
-   procedure HitTest (aCursor : Cursor)  is
-    aBound : constant FloatBounds := Element (Position => aCursor);
-   begin
-
-      if (touchedX >= aBound.xMin and touchedX <= aBound.xMax and
-         touchedY >= aBound.yMin and touchedY <= aBound.yMax
-         ) then
-         Text_IO.Put_Line("Hit" & Integer'Image(Standard.Integer(aBound.name)));
-      end if;
-
-   end HitTest;
 
 
    procedure DeInit is

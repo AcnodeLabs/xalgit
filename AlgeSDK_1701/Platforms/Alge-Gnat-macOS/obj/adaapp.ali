@@ -8,15 +8,8 @@ A -feliminate-unused-debug-symbols
 P SS ZX
 
 RN
-RV NO_DIRECT_BOOLEAN_OPERATORS
-RV NO_DISPATCHING_CALLS
-RV NO_EXCEPTION_HANDLERS
-RV NO_EXCEPTIONS
 RV NO_FLOATING_POINT
 RV NO_IO
-RV NO_IMPLICIT_CONDITIONALS
-RV NO_SECONDARY_STACK
-RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
@@ -24,61 +17,32 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U adaapp%b		adaapp.adb		cfc4408e OO PF PK
-W ada%s			ada.ads			ada.ali
-W ada.containers%s	a-contai.ads		a-contai.ali
-W ada.containers.vectors%s
+U adaapp%b		adaapp.adb		88d88b7f OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
-W adaapp%s		adaapp.adb		adaapp.ali
-W algesdk%s		algesdk.ads		algesdk.ali
 W system.concat_2%s	s-conca2.adb		s-conca2.ali
 W system.concat_6%s	s-conca6.adb		s-conca6.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
-W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-W system.soft_links%s	s-soflin.adb		s-soflin.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
-W text_io%s		text_io.ads		text_io.ali
 
-U adaapp%s		adaapp.ads		966a49af EE OO PF PK
+U adaapp%s		adaapp.ads		a059e863 EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
-Z ada.containers.generic_array_sort%s
-Z ada.containers.helpers%s  a-conhel.adb	a-conhel.ali
 W ada.containers.vectors%s
-W ada.exceptions%s	a-except.adb		a-except.ali
-Z ada.finalization%s	a-finali.ads		a-finali.ali
-Z ada.iterator_interfaces%s
-W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
-W ada.tags%s		a-tags.adb		a-tags.ali
-W ada.text_io%s		a-textio.adb		a-textio.ali
-Z ada.unchecked_deallocation%s
 W algesdk%s		algesdk.ads		algesdk.ali
 W cmd%s			cmd.ads			cmd.ali
+W hittestcode%s		hittestcode.adb		hittestcode.ali
 W interfaces%s		interfac.ads		interfac.ali
 W interfaces.c%s	i-c.adb			i-c.ali
 W interfaces.c.strings%s  i-cstrin.adb		i-cstrin.ali
-W system%s		system.ads		system.ali
-W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
-W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
-W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-W system.soft_links%s	s-soflin.adb		s-soflin.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
-W system.storage_elements%s  s-stoele.adb	s-stoele.ali
-W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
-W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
-W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W text_io%s		text_io.ads		text_io.ali
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-charac.ads		20160516092930 2d3ec45b ada.characters%s
 D a-chlat1.ads		20160516092930 66457d31 ada.characters.latin_1%s
 D a-contai.ads		20160516092926 61e5e089 ada.containers%s
-D a-cgarso.ads		20160516092926 9129bfa8 ada.containers.generic_array_sort%s
 D a-conhel.ads		20160516092928 20298884 ada.containers.helpers%s
-D a-conhel.adb		20160516092930 9cc5095b ada.containers.helpers%b
 D a-convec.ads		20160516092932 7e2b0fdf ada.containers.vectors%s
-D a-convec.adb		20160516092926 1450cb2b ada.containers.vectors%b
 D a-except.ads		20160516092928 291912d5 ada.exceptions%s
 D a-finali.ads		20160516092930 bf4f806b ada.finalization%s
 D a-ioexce.ads		20160516092926 e4a01f64 ada.io_exceptions%s
@@ -90,18 +54,17 @@ D a-strunb.ads		20160516092928 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
 D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D a-uncdea.ads		20160516092930 f15a5ed1 ada.unchecked_deallocation%s
-D adaapp.ads		20170212180919 4aedbfbd adaapp%s
-D adaapp.adb		20170212192205 c4d329f9 adaapp%b
+D adaapp.ads		20170214134330 d1adac21 adaapp%s
+D adaapp.adb		20170214135648 5975275e adaapp%b
 D algesdk.ads		20170203185558 30ea4061 algesdk%s
 D cmd.ads		20160920153708 94636470 cmd%s
+D hittestcode.ads	20170214135541 d0c8614d hittestcode%s
 D interfac.ads		20160516092928 5ab55268 interfaces%s
 D i-c.ads		20160516092926 5421119b interfaces.c%s
 D i-cstrin.ads		20160516092930 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
 D system.ads		20160516092930 c3282aa7 system%s
 D s-atocou.ads		20160516092932 b45c2d8d system.atomic_counters%s
-D s-atocou.adb		20160516092930 b65612c0 system.atomic_counters%b
 D s-conca2.ads		20160516092930 02a0d7d0 system.concat_2%s
 D s-conca6.ads		20160516092926 d2c72db2 system.concat_6%s
 D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
@@ -110,14 +73,11 @@ D s-ficobl.ads		20160516092932 078245e4 system.file_control_block%s
 D s-finmas.ads		20160516092930 7811a767 system.finalization_masters%s
 D s-finroo.ads		20160516092930 4ff27390 system.finalization_root%s
 D s-imgint.ads		20160516092928 02dbe0c2 system.img_int%s
-D s-memory.ads		20160516092930 597d6634 system.memory%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
-D s-pooglo.ads		20160516092926 ede33ef8 system.pool_global%s
 D s-secsta.ads		20160516092930 86a2856d system.secondary_stack%s
 D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
 D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
 D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
-D s-stalib.adb		20160516092926 f2fe2716 system.standard_library%b
 D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20160516092930 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20160516092928 b16154c2 system.storage_pools%s
@@ -128,126 +88,94 @@ D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20160516092930 1b7d22d2 system.wch_con%s
 D text_io.ads		20160516092930 45d626c9 text_io%s
 X 1 ada.ads
-16K9*Ada 19e8 22|1r6 1r23 4r6 7r6 7r26 8r6 23|3r6
+16K9*Ada 19e8 18|4r6 8r6 8r26 9r6
 X 4 a-contai.ads
-16K13*Containers 24e19 22|7w10 7r30 8r10 23|3r10
-X 8 a-convec.ads
-41I9 Index_Type 22|25r35
-42+9 Element_Type 22|26r35
-46k24*Vectors 518e27 22|8w21 25r27 23|3w21
-57R9*Vector<11|43R9> 23|30r24[22|25]
-65R9*Cursor 22|36r33[25] 23|29r24[22|25] 127r33[22|25]
-119V13*Element{22|16R9} 23|128s38[22|25]
-119r22 Position{65R9[22|25]} 23|128r47[22|25]
-245U14*Append 23|61s17[22|25] 62s17[22|25] 63s17[22|25] 64s17[22|25] 65s17[22|25]
-329U14*Iterate 23|119s10[22|25]
-330r7 Container{57R9[22|25]} 23|119r18[22|25]
-331p7 Process 23|120r18[22|25]
-X 13 a-iteint.ads
+16K13*Containers 24e19 18|8w10 8r30 9r10
+X 6 a-convec.ads
+46k24*Vectors 518e27 18|9w21
+57R9*Vector<8|43R9>
+245U14*Append 19|49s17[22|18] 50s17[22|18] 51s17[22|18] 52s17[22|18] 53s17[22|18]
+X 10 a-iteint.ads
 24h9 Forward_Iterator
-32h9 Reversible_Iterator<24R9[8|72]>
-X 15 a-string.ads
-16K13*Strings 35e16 22|4r10
-X 17 a-strunb.ads
-76K21*Unbounded 489e26 22|4w18
-X 19 a-textio.ads
-49K13*Text_IO 471e16 22|1w10 1r27
-263U14*Put_Line 23|123s15 134s18
-X 22 adaapp.ads
-10K9*AdaApp 45l5 45e11 23|4w6 4r18 6b14 145l5 145t11
-12f4*timeVar{27|64F9} 23|71m7 71r18 77r23
-13i4*width{integer}
-14i4*height{integer}
-16R9*FloatBounds 23e14 26r51 23|36r19 37r19 38r19 39r19 40r19 128r23
-18i10*name{27|35I9} 23|134r73
-19f10*xMin{float} 23|131r30
-20f10*xMax{float} 23|131r58
-21f10*yMin{float} 23|132r29
-22f10*yMax{float} 23|132r57
-25K12*HitList[8|46] 28r8 23|29r16 30r16
-30U14*Init 40i<cpp,AppInit>24 23|42b14 67l8 67t12
-31U14*Update 31>21 41i<cpp,AppUpdate>24 23|69b14 72l8 72t14
-31f21 dt{27|64F9} 23|69b21 71r28
-32U14*Render 39i<cpp,AppRender>24 23|74b14 91l8 91t14
-33U14*ProcessInput 33>28 33>42 33>51 43i<cpp,AppProcessInput>24 23|93b14
-. 125l8 125t20
-33i28 command{27|35I9} 23|93b29 100r10 106r10 111r10 123r55
-33i42 i1{27|35I9} 23|93b43 102r21 116r28 123r105
-33i51 i2{27|35I9} 23|93b52 103r21 117r28 123r149
-34U14*DeInit 42i<cpp,AppDeInit>24 23|140b14 143l8 143t14
-36U14*HitTest 36>23 23|120r31 127b14 137l8 137t15
-36r23 aCursor{8|65R9[25]} 23|127b23 128r59
-X 23 adaapp.adb
-8r4 voyager{24|28R9} 45m7 46m7 47r81 47r108 89r40
-9r4 panel{24|28R9} 49m7 50r86 80r40
-10a4 planets(24|28R9) 54m9 55r70 86r25
-11a4 planet_size(float) 55r99
-12a4 planet_tga(28|47P9) 55r49
-24f4 sc{float} 55r114
-25i4 planetNo{integer} 86r33 112m10 112r22 113r13 113m31
-26i4 iUnassigned{27|35I9} 33r22 34r22
-27f4 fUnassigned{float} 31r24 32r24 107r22 108r22
-29r4 hitCursor{8|65R9[22|25]}
-30r4 hitBounds{8|57R9[22|25]} 61m7 61r7 62m7 62r7 63m7 63r7 64m7 64r7 65m7
-. 65r7 119r31
-31f4 touchedX{float} 107m10 116m10 131r11 131r39
-32f4 touchedY{float} 108m10 117m10 132r10 132r38
-33i4 screenX{27|35I9} 102m10 116r39
-34i4 screenY{27|35I9} 103m10 117r39
-36r4 boundsOfBtn1{22|16R9} 61r24
-37r4 boundsOfBtn2{22|16R9} 62r24
-38r4 boundsOfBtn3{22|16R9} 63r24
-39r4 boundsOfBtn4{22|16R9} 64r24
-40r4 boundsOfPlnt{22|16R9} 65r24
-52i11 n{integer} 54r17 54r40 55r60 55r78 55r111
-75f6 angle1{float} 77m7 83r43
-94b7 spit{boolean} 98m7 101m10 114m10
-128r5 aBound{22|16R9} 131r23 131r51 132r22 132r50 134r66
-X 24 algesdk.ads
-8K10*AlgeSDK 22|6w6 6r19 23|1w6 1r19 24|71e14
-10f4*FACTOR_RADIANS_DEGREES{float} 23|77r34
-28R9*GameObject 23|8r14 9r16 10r30 24|34e17
-32i10*modelId{27|35I9} 23|45m15 47r89 49m13 50r92 54m20 55r81 80r46 86r43
-. 89r48
-33f10*scale{float} 23|46m15 47r116
-46U13*alLoadModel 23|47s7 50s7 55s9
-47U13*alDrawModel 23|86s7
-47i26 id{27|35I9} 23|86r19
-48U13*alDrawModelTranslateRotate 23|80s7 89s7
-48i41 id{27|35I9} 23|80r34 89r34
-49f66 posy{27|64F9} 23|80r55
-49f89 posz{27|64F9} 23|89r57
-50f44 angle{27|64F9} 23|80r68 89r71
-50f85 y{27|64F9} 23|89r88
-50f104 z{27|64F9} 23|80r84
-54U15*alTranslateRotate 23|83s7
-56f44 angle{27|64F9} 23|83r26
-56f85 y{27|64F9} 23|83r53
-X 25 cmd.ads
-3K9*CMD 22|3w6 3r15 23|100r20 106r20 111r20 25|49e8
-31i4*TOUCH_START{27|35I9} 23|111r24
-32i4*TOUCH_END{27|35I9} 23|106r24
-37i4*SCREENSIZE{27|35I9} 23|100r24
-X 26 interfac.ads
-38K9*Interfaces 22|2r6 2r24 5r6 5r32 23|69r26 26|184e15
-X 27 i-c.ads
-18K20*C 22|2w17 2r35 5r17 5r43 23|69r37 27|230e17
-35I9*int<integer> 22|18r16 33r37 33r46 33r55 23|26r27 33r15 34r15 47r77 50r82
-. 54r31 55r66 93r38 93r47 93r56
-64F9*C_float<float> 22|12r14 31r26 23|47r100 55r91 69r39 83r35
-X 28 i-cstrin.ads
-36K22*Strings 22|5w19 5r45 28|106e25
-47P9*chars_ptr 23|12r34
-60V13*New_String{47P9} 23|13s46 14s46 15s46 16s46 17s46 18s46 19s46 20s46
-. 21s46 47s19 47s48 50s19 50s50 55s21
-X 30 system.ads
-67M9*Address
-X 41 s-memory.ads
-53V13*Alloc{30|67M9} 103i<c,__gnat_malloc>22
-68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{30|67M9} 105i<c,__gnat_realloc>22
-X 48 s-stalib.adb
-93U14 Break_Start 94i<c,__gnat_break_start>22
-X 57 text_io.ads
-24K9*Text_IO=24:29 23|2w6 2r19 123r7 134r10
+32h9 Reversible_Iterator<24R9[6|72]>
+X 12 a-string.ads
+16K13*Strings 35e16 18|4r10
+X 14 a-strunb.ads
+76K21*Unbounded 489e26 18|4w18
+X 16 a-textio.ads
+263U14*Put_Line 19|47s15 107s18 110s15
+X 18 adaapp.ads
+12K9*AdaApp 32l5 32e11 19|3b14 120l5 120t11
+14f4*timeVar{24|64F9} 19|59m7 59r18 65r23
+15i4*width{integer}
+16i4*height{integer}
+19U14*Init 27i<cpp,AppInit>24 19|28b14 55l8 55t12
+20U14*Update 20>21 28i<cpp,AppUpdate>24 19|57b14 60l8 60t14
+20f21 dt{24|64F9} 19|57b21 59r28
+21U14*Render 26i<cpp,AppRender>24 19|62b14 79l8 79t14
+22U14*ProcessInput 22>28 22>42 22>51 30i<cpp,AppProcessInput>24 19|81b14
+. 112l8 112t20
+22i28 command{24|35I9} 19|81b29 88r10 94r10 100r10 110r55
+22i42 i1{24|35I9} 19|81b43 90r21 106r35 110r105
+22i51 i2{24|35I9} 19|81b52 91r21 106r59 110r149
+23U14*DeInit 29i<cpp,AppDeInit>24 19|115b14 118l8 118t14
+X 19 adaapp.adb
+5r4 voyager{20|28R9} 31m7 32m7 33r81 33r108 77r40
+6r4 panel{20|28R9} 35m7 36r86 68r40
+7a4 planets(20|28R9) 40m9 41r70 74r25
+8a4 planet_size(float) 41r99
+9a4 planet_tga(25|47P9) 41r49
+21f4 sc{float} 41r114
+22i4 planetNo{integer} 74r33
+23i4 iUnassigned{24|35I9} 25r22 26r22
+25i4 screenX{24|35I9} 90m10
+26i4 screenY{24|35I9} 91m10
+38i11 n{integer} 40r17 40r40 41r60 41r78 41r111
+63f6 angle1{float} 65m7 71r43
+82b7 spit{boolean} 86m7 89m10
+83i7 hitId{integer} 105m10 107r66
+X 20 algesdk.ads
+8K10*AlgeSDK 18|6w6 6r19 20|71e14
+10f4*FACTOR_RADIANS_DEGREES{float} 19|65r34
+28R9*GameObject 19|5r14 6r16 7r30 20|34e17
+32i10*modelId{24|35I9} 19|31m15 33r89 35m13 36r92 40m20 41r81 68r46 74r43
+. 77r48
+33f10*scale{float} 19|32m15 33r116
+46U13*alLoadModel 19|33s7 36s7 41s9
+47U13*alDrawModel 19|74s7
+47i26 id{24|35I9} 19|74r19
+48U13*alDrawModelTranslateRotate 19|68s7 77s7
+48i41 id{24|35I9} 19|68r34 77r34
+49f66 posy{24|64F9} 19|68r55
+49f89 posz{24|64F9} 19|77r57
+50f44 angle{24|64F9} 19|68r68 77r71
+50f85 y{24|64F9} 19|77r88
+50f104 z{24|64F9} 19|68r84
+54U15*alTranslateRotate 19|71s7
+56f44 angle{24|64F9} 19|71r26
+56f85 y{24|64F9} 19|71r53
+X 21 cmd.ads
+3K9*CMD 18|3w6 3r15 19|88r20 94r20 100r20 21|49e8
+31i4*TOUCH_START{24|35I9} 19|100r24
+32i4*TOUCH_END{24|35I9} 19|94r24
+37i4*SCREENSIZE{24|35I9} 19|88r24
+X 22 hittestcode.ads
+7K9*HitTestCode 18|7w6 7r23 19|106r12 22|27e16
+22V13*DoIt{integer} 19|106s24
+25r4*hitBounds{6|57R9[18]} 19|49m7 49r7 50m7 50r7 51m7 51r7 52m7 52r7 53m7
+. 53r7
+X 23 interfac.ads
+38K9*Interfaces 18|2r6 2r24 5r6 5r32 19|57r26 23|184e15
+X 24 i-c.ads
+18K20*C 18|2w17 2r35 5r17 5r43 19|57r37 24|230e17
+35I9*int<integer> 18|22r37 22r46 22r55 19|23r27 25r15 26r15 33r77 36r82 40r31
+. 41r66 81r38 81r47 81r56
+64F9*C_float<float> 18|14r14 20r26 19|33r100 41r91 57r39 71r35
+X 25 i-cstrin.ads
+36K22*Strings 18|5w19 5r45 25|106e25
+47P9*chars_ptr 19|9r34
+60V13*New_String{47P9} 19|10s46 11s46 12s46 13s46 14s46 15s46 16s46 17s46
+. 18s46 33s19 33s48 36s19 36s50 41s21
+X 50 text_io.ads
+24K9*Text_IO=24:29 18|10w6 10r19 19|47r7 107r10 110r7
 

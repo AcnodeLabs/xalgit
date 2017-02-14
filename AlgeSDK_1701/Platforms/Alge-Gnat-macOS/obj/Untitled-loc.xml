@@ -14,27 +14,15 @@
       <vfs_project />
       <vfs_file>/Users/alex/src_ada/hello.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 40" line=" 95" >
-      <vfs_project />
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 4" >
-      <vfs_project />
-      <vfs_file>/Users/alex/empty.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 3" line=" 17" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 63" line=" 74" >
+    <file_marker column=" 1" line=" 30" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 30" line=" 44" >
+    <file_marker column=" 1" line=" 28" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/SDKSRC/Base/Ada/AlgeSDK.ads</vfs_file>
     </file_marker>
@@ -42,173 +30,261 @@
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/SDKSRC/Base/Ada/CMD.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 17" line=" 45" >
+    <file_marker column=" 5" line=" 53" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/src/alge-gnat-mac.cpp</vfs_file>
     </file_marker>
-    <file_marker column=" 63" line=" 74" >
+    <file_marker column=" 1" line=" 31" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 110" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 7" line=" 99" >
+    <file_marker column=" 1" line=" 101" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 21" line=" 88" >
+    <file_marker column=" 1" line=" 31" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 16" line=" 98" >
+    <file_marker column=" 1" line=" 110" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 13" line=" 92" >
+    <file_marker column=" 1" line=" 50" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 14" line=" 99" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 64" line=" 101" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 15" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 24" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 49" line=" 7" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 24" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 33" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 23" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 52" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 241" >
+    <file_marker column=" 4" line=" 16" >
       <vfs_project />
-      <vfs_file>/usr/local/gnat/lib/gcc/x86_64-apple-darwin14.5.0/4.9.4/rts-native/adainclude/a-convec.ads</vfs_file>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 7" line=" 52" >
+    <file_marker column=" 9" line=" 103" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 21" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 5" line=" 51" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 20" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 5" line=" 51" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 27" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 61" line=" 33" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 35" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 114" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 61" line=" 105" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 61" line=" 33" >
-      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
-      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
     </file_marker>
     <file_marker column=" 14" line=" 31" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/src/alge-gnat-mac.cpp</vfs_file>
     </file_marker>
-    <file_marker column=" 61" line=" 33" >
+    <file_marker column=" 16" line=" 11" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 7" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 108" >
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 103" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 7" line=" 107" >
+    <file_marker column=" 49" line=" 3" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 109" >
+    <file_marker column=" 9" line=" 103" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 20" line=" 107" >
+    <file_marker column=" 1" line=" 4" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 109" >
+    <file_marker column=" 1" line=" 5" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 116" >
+    <file_marker column=" 9" line=" 103" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 11" line=" 113" >
+    <file_marker column=" 16" line=" 99" >
       <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
       <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 103" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 2" line=" 28" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 103" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 103" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 24" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 7" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 4" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 7" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 12" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 7" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 18" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 18" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 2" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 18" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 2" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 18" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 3" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 18" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 7" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 4" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 7" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 4" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 24" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 4" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 103" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 103" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 26" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 102" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 92" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 39" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 95" >
+      <vfs_project>/Users/alex/Desktop/xalgit/AlgeSDK_1701/Platforms/Alge-Gnat-macOS/Untitled.gpr</vfs_project>
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/AdaApp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 26" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 17" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 55" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 20" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 6" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 20" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 1" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 9" line=" 20" >
+      <vfs_project />
+      <vfs_file>/Users/alex/Desktop/xalgit/com_acnodelabs/PlanetsAda/AdaLogic/src/hittestcode.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >
