@@ -17,7 +17,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U adaapp%b		adaapp.adb		5d5b7e13 OO PK
+U adaapp%b		adaapp.adb		47f7b538 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.float_random%s  a-nuflra.adb	a-nuflra.ali
@@ -62,7 +62,7 @@ D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
 D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
 D adaapp.ads		20170215171927 1dab1e38 adaapp%s
-D adaapp.adb		20170215180907 00a6cb51 adaapp%b
+D adaapp.adb		20170215181204 1a0a007a adaapp%b
 D algesdk.ads		20170215180504 cec6ba0a algesdk%s
 D cmd.ads		20160920153708 94636470 cmd%s
 D hittestcode.ads	20170214140326 d0c8614d hittestcode%s

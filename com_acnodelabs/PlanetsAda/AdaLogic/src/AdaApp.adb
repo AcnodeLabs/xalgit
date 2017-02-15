@@ -58,9 +58,9 @@ package body AdaApp is
 
       for n in 1..NUMSTARS
       loop
-         starpos(n).values.x := Random(rGen)*80.0-40.0;
-         starpos(n).values.y := Random(rGen)*80.0-40.0;
-         starpos(n).values.z := Random(rGen)*80.0-40.0;
+         starpos(n).values.x := Random(rGen)*180.0-100.0;
+         starpos(n).values.y := Random(rGen)*180.0-100.0;
+         starpos(n).values.z := Random(rGen)*180.0-100.0;
    --
       end loop;
 
