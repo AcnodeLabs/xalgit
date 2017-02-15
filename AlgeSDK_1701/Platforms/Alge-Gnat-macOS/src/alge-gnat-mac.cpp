@@ -150,6 +150,16 @@ void sndPlay(int id) {
 }
 
 
+extern "C" void alBillBoardBegin() {
+  billboardBegin();
+
+}
+
+extern "C" void alBillBoardEnd() {
+  billboardEnd();
+}
+
+
 extern "C" void PushP(int cmd, char* param1, char* param2) {
   app.output.pushP(cmd, (void*)param1, (void*)param2);
 }
@@ -169,7 +179,7 @@ extern "C" void alLoadModel(char* alx, char* tga, int id, float size) {
 
 extern "C" void alDrawModelTranslateRotate(int id, float posx , float posy, float posz, 
 					   float angle,float x, float y,float z, 
- int rotatefirst = 0) 
+ int rotatefirst = 0, int billboard = 0) 
 {
   glPushMatrix();
   if (rotatefirst!=0)  {
@@ -178,8 +188,13 @@ extern "C" void alDrawModelTranslateRotate(int id, float posx , float posy, floa
     } else {
     glTranslatef(posx,posy,posz);
     glRotatef(angle, x,y,z);
-    }
-    if (app.rm.models[id]->loaded) app.rm.models[id]->glDraw();
+  }
+    
+  if (app.rm.models[id]->loaded) {
+    if (billboard==1) billboardBegin();
+    app.rm.models[id]->glDraw();
+    if (billboard==1) billboardEnd();
+  }
   glPopMatrix();
 }
 

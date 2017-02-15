@@ -8,6 +8,7 @@ with HitTestCode; use HitTestCode;
 with Ada.Containers; use Ada.Containers;
 with Ada.Containers.Vectors;
 with Text_IO; use Text_IO;
+with Ada.Numerics.Float_Random;
 
 package AdaApp is
 
@@ -21,7 +22,7 @@ package AdaApp is
    procedure Render;
    procedure ProcessInput (command: Int; i1: Int; i2: Int);
    procedure DeInit;
-
+   procedure renderStars;
 
    pragma export (CPP, Render, "AppRender");
    pragma export (CPP, Init, "AppInit");

@@ -1,9 +1,16 @@
+with Ada.Numerics.Float_Random; use Ada.Numerics.Float_Random;
 
 
 package body AdaApp is
 
    voyager : GameObject;
-   panel     : GameObject;
+   panel   : GameObject;
+   star    : GameObject;
+   NUMSTARS: constant int := 350;
+
+   type pos_array is array (1..NUMSTARS) of Position;
+   starpos : pos_array;
+
    planets : array (0..8) of GameObject;
    planet_size : array (0..8) of Float := (4880.0,7500.0,7500.0,4444.0,9900.0,9500.0,8000.0,8000.0,4880.0);--Moon:=,2274.0);
    planet_tga  : array (0..8) of chars_ptr := (
@@ -25,7 +32,10 @@ package body AdaApp is
    screenX  : Int := iUnassigned;
    screenY  : Int := iUnassigned;
 
+   rGen : Generator;
+
    procedure Init is
+      use Ada.Numerics.Float_Random;
    begin
 
       voyager.modelId := 0;
@@ -35,16 +45,31 @@ package body AdaApp is
       panel.modelId := 1;
       alLoadModel(New_String("misc.alx")       , New_String("misc.tga")        , int(panel.modelId) , 1.0);
 
+      star.modelId := 2;
+      alLoadModel(New_String("star.alx"), New_String("star.tga"), int(star.modelId), 0.1);
+
       for n in 0..8
         loop
-        planets(n).modelId := int (2 + n);
+        planets(n).modelId := int (3 + n);
         alLoadModel(New_String("sphere.alx")  , planet_tga(n) ,  int(planets(n).modelId), C_float(planet_size(n)*sc));
       end loop;
+
+      Reset(rGen);
+
+      for n in 1..NUMSTARS
+      loop
+         starpos(n).values.x := Random(rGen)*80.0-40.0;
+         starpos(n).values.y := Random(rGen)*80.0-40.0;
+         starpos(n).values.z := Random(rGen)*80.0-40.0;
+   --
+      end loop;
+
+
 
       -- Load Sounds
   --    alPushP(CMD.SNDSET, New_String("cosmos.wav"),Null_Ptr);
 
-      Text_IO.Put_Line("Hit Init 5 Hotspots");
+      Put_Line("Hit Init 5 Hotspots");
    -- https://docs.google.com/spreadsheets/d/1LnzLCQDEV4u01F0RhHSR2k0h-F8e-l5XopcBfGvRc1g/edit#gid=0
       hitBounds.Append((1, 0.32,0.40, 0.04,0.14)); --btn1
       hitBounds.Append((2, 0.42,0.49, 0.04,0.14)); --btn2
@@ -59,6 +84,26 @@ package body AdaApp is
       timeVar := timeVar + dt;
    end Update;
 
+   procedure renderStars is
+      angle1 : float := 0.0;
+   begin
+      angle1 := float(timeVar) * FACTOR_RADIANS_DEGREES * 1.00; -- Convert to Degrees
+      for n in 1..NUMSTARS
+      loop
+         alBillBoardBegin;
+         alDrawModelTranslateRotate(id          => star.modelId,
+                                    posx        => C_float(starpos(n).values.x),
+                                    posy        => C_float(starpos(n).values.y),
+                                    posz        => C_float(starpos(n).values.z),
+                                    angle       => C_float(angle1),
+                                    y           => 1.0,
+                                    rotatefirst => 1,
+                                    billboard   => 1
+                                   );
+         alBillBoardEnd;
+      end loop;
+   end renderStars;
+
    procedure Render is
      angle1 : float := 0.0;
    begin
@@ -69,6 +114,8 @@ package body AdaApp is
 
       --set spin
       alTranslateRotate( angle => C_float(angle1),  y => 1.0);
+
+      renderStars;
 
       -- drawPlanet
       alDrawModel(id => planets(planetNo).modelId)  ;

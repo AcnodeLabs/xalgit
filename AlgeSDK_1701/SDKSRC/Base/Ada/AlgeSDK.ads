@@ -39,6 +39,8 @@ with CMD; use CMD;
   procedure alPushI (cmd: Int; x: Int; y: Int);
   procedure alPushP (cmd: Int; param1: Strings.chars_ptr; param2: Strings.chars_ptr);
 
+  procedure alBillBoardBegin;
+  procedure alBillBoardEnd;
   procedure alTriangle(size: C_float);
   procedure alLine(x1: C_float; y1: C_float; x2: C_float; y2: C_float);
   procedure alCircle(r: C_float;segments: Int);
@@ -48,7 +50,7 @@ with CMD; use CMD;
   procedure alDrawModelTranslateRotate (id: int;
                                            posx: C_float := 0.0 ;posy : C_float := 0.0 ;posz :C_float := 0.0;
                                            angle: C_float := 0.0;x: C_float := 0.0 ;y: C_float := 0.0; z: C_float := 0.0;
-                                           rotatefirst: int := 0
+                                           rotatefirst: int := 0; billboard: int := 0
                                        );
 
     procedure alTranslateRotate (
@@ -63,6 +65,8 @@ with CMD; use CMD;
    pragma Import (C, alCircle, "alCircle");
    pragma Import (C, alRect, "alRect");
 
+   pragma Import (C, alBillBoardBegin, "alBillBoardBegin");
+   pragma Import (C, alBillBoardEnd, "alBillBoardEnd");
    pragma Import (C, alLoadModel, "alLoadModel");
    pragma Import (C, alDrawModel, "alDrawModel");
    pragma Import (C, alDrawModelTranslateRotate, "alDrawModelTranslateRotate");
