@@ -41,6 +41,8 @@ with CMD; use CMD;
 
   procedure alBillBoardBegin;
   procedure alBillBoardEnd;
+  procedure alLoadIdentity;
+  procedure alaluLookAt(x1: C_float; y1: C_float;z1: C_float; x2: C_float; y2: C_float; z2:C_float; x: C_float; y: C_float; z:C_float);
   procedure alTriangle(size: C_float);
   procedure alLine(x1: C_float; y1: C_float; x2: C_float; y2: C_float);
   procedure alCircle(r: C_float;segments: Int);
@@ -65,11 +67,13 @@ with CMD; use CMD;
    pragma Import (C, alCircle, "alCircle");
    pragma Import (C, alRect, "alRect");
 
+   pragma Import (C, alLoadIdentity, "alLoadIdentity");
    pragma Import (C, alBillBoardBegin, "alBillBoardBegin");
    pragma Import (C, alBillBoardEnd, "alBillBoardEnd");
    pragma Import (C, alLoadModel, "alLoadModel");
    pragma Import (C, alDrawModel, "alDrawModel");
    pragma Import (C, alDrawModelTranslateRotate, "alDrawModelTranslateRotate");
    pragma Import (C, alTranslateRotate, "alTranslateRotate");
+   pragma Import (C, alaluLookAt, "alaluLookAt");
 
   end AlgeSDK;

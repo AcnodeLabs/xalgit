@@ -155,6 +155,14 @@ extern "C" void alBillBoardBegin() {
 
 }
 
+extern "C" void alLoadIdentity() {
+  glLoadIdentity();
+}
+
+extern "C" void alaluLookAt(float x1, float y1, float z1, float x2, float y2, float z2, float x, float y, float z) {
+  aluLookAt(x1,y1,z1,x2,y2,z2,x,y,z);
+}
+
 extern "C" void alBillBoardEnd() {
   billboardEnd();
 }

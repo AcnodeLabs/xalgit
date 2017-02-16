@@ -1,11 +1,11 @@
 project Untitled is
 
-   for Source_Dirs use ("src", "../../SDKSRC/Base/Ada", "../../../com_acnodelabs/PlanetsAda/AdaLogic/src");
+   for Source_Dirs use ("src", "../../SDKSRC/Base/Ada", "../../SDKSRC/Classlets/com/acnodelabs/funkit", "../../../com_acnodelabs/PlanetsAda/AdaLogic/src");
    for Object_Dir use "obj";
    for Main use ("PlanetsAda.cpp");
    for Languages use ("Ada", "C++");
-   for Source_Files use ("AdaApp.adb", "AdaApp.ads", "alge-gnat-mac.cpp", "AlgeSDK.ads", "CANDIDATE.h", "CMD.ads", "hittestcode.adb", "hittestcode.ads", "PlanetsAda.cpp", "resource.h", "structdefs_h.ads", "t.adb", "t.ads", "Timer.cpp", "Timer.h", 
-      "t-th.adb", "t-th.ads");
+   for Source_Files use ("AdaApp.adb", "AdaApp.ads", "alge-gnat-mac.cpp", "AlgeSDK.ads", "CANDIDATE.h", "CAnimator.adb", "CAnimator.ads", "CMD.ads", "CTimed.adb", "CTimed.ads", "hittestcode.adb", "hittestcode.ads", "PlanetsAda.cpp", "resource.h", 
+      "structdefs_h.ads", "t.adb", "t.ads", "Timer.cpp", "Timer.h", "t-th.adb", "t-th.ads");
 
    package Naming is
       for Spec_Suffix ("c++") use ".h";

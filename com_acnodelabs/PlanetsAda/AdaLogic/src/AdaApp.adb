@@ -34,6 +34,14 @@ package body AdaApp is
 
    rGen : Generator;
 
+   function incAnim(animstep: in out Float ) return Float is
+      begin
+      if animstep=0.0 then CTimed.Set(0.0,1.0,0.2,animStepTimed); CTimed.ReDo(animStepTimed); end if;
+      animstep := StepLinear(deltaT, animStepTimed);
+   return animstep;
+   end incAnim;
+
+
    procedure Init is
       use Ada.Numerics.Float_Random;
    begin
@@ -81,6 +89,7 @@ package body AdaApp is
 
    procedure Update(dt : Interfaces.C.C_float) is
    begin
+      deltaT := Float(dt);
       timeVar := timeVar + dt;
    end Update;
 
@@ -104,6 +113,21 @@ package body AdaApp is
       end loop;
    end renderStars;
 
+   procedure AnimDo is
+      begin
+         if nseq=ANIMSEQ_SURFACE and keyframe=1 then
+            tgt.x := QuadraticEaseIn(animstep, 0.0, -bz * 1.02);
+            tgt.y := QuadraticEaseIn(animstep, 0.0, 0.0);
+            tgt.z := QuadraticEaseIn(animstep, 0.0, 0.0);
+            eye.x := QuadraticEaseIn(animstep, 0.0, -bz * 1.02);
+            eye.y := QuadraticEaseIn(animstep, 0.0, 0.0);
+            eye.z := QuadraticEaseIn(animstep, - (bz*5.0), -(bz * 1.02));
+            eyerot.z := QuadraticEaseIn(animstep, 0.0, 90.0);
+            animstep := incAnim(animstep);
+            if animstep>1.0 then animstep:=0.0; nseq:=0; end if;
+         end if;
+   end AnimDo;
+
    procedure Render is
      angle1 : float := 0.0;
    begin
@@ -115,7 +139,21 @@ package body AdaApp is
       --set spin
       alTranslateRotate( angle => C_float(angle1),  y => 1.0);
 
-      renderStars;
+         renderStars;
+
+
+
+      AnimDo;
+      alTranslateRotate(angle => C_float(eyerot.z),z => 1.0);
+      alaluLookAt(x1 => C_float(eye.x),
+                  y1 => C_float(eye.y),
+                  z1 => C_float(eye.z),
+                  x2 => C_float(tgt.x),
+                  y2 => C_float(tgt.y),
+                  z2 => C_float(tgt.z),
+                  x  => 0.0,
+                  y  => 1.0,
+                  z  => 0.0);
 
       -- drawPlanet
       alDrawModel(id => planets(planetNo).modelId)  ;
@@ -149,15 +187,25 @@ package body AdaApp is
 --     planetNo := planetNo + 1;
 --     if planetNo > 8 then planetNo := 0; end if;
 
-         hitId :=
-           HitTestCode.DoIt(Float(i1)/ Float(1190), Float(i2)/ Float(700));
-         Text_IO.Put_Line("Hit" & Integer'Image(Standard.Integer(hitID)));
+         hitId := HitTestCode.DoIt(Float(i1)/ Float(1190), Float(i2)/ Float(700));
+         if hitId>=1 and hitId<=5 then onHit(hitId); end if;
+     --    Text_IO.Put_Line("Hit" & Integer'Image(Standard.Integer(hitID)));
       end if;
 
       Text_IO.Put_Line(Integer'Image(Standard.Integer(command)) & "=(" & Integer'Image(Standard.Integer(i1)) & "," & Integer'Image(Standard.Integer(i2)) & ")");
 
    end ProcessInput;
 
+
+
+
+   procedure onHit(hitId: Integer) is
+   begin
+      if hitId=ANIMSEQ_SURFACE then
+         nseq:=ANIMSEQ_SURFACE;
+         keyframe:=1;
+      end if;
+   end onHit;
 
    procedure DeInit is
    begin

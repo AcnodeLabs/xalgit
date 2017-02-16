@@ -19,7 +19,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U algesdk%s		algesdk.ads		7b231924 EE OO PF PK
+U algesdk%s		algesdk.ads		103f12bf EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -55,7 +55,7 @@ D a-strunb.ads		20160516092928 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20160516092930 f15a5ed1 ada.unchecked_deallocation%s
-D algesdk.ads		20170215180504 cec6ba0a algesdk%s
+D algesdk.ads		20170216190336 a5dab191 algesdk%s
 D cmd.ads		20160920153708 94636470 cmd%s
 D interfac.ads		20160516092928 5ab55268 interfaces%s
 D i-c.ads		20160516092926 5421119b interfaces.c%s
@@ -91,7 +91,7 @@ X 13 a-string.ads
 X 15 a-strunb.ads
 76K21*Unbounded 489e26 19|4w18 4r45
 X 19 algesdk.ads
-8K10*AlgeSDK 75l7 75e14
+8K10*AlgeSDK 79l7 79e14
 10f4*FACTOR_RADIANS_DEGREES{float}
 12R9*f3 15e17 19r19 24r19
 14f10*x{float}
@@ -106,68 +106,80 @@ X 19 algesdk.ads
 31r10*rot{22R9}
 32i10*modelId{22|35I9}
 33f10*scale{float}
-39U13*alPushI 39>22 39>32 39>40 62b<c,PushI>22
+39U13*alPushI 39>22 39>32 39>40 64b<c,PushI>22
 39i22 cmd{22|35I9}
 39i32 x{22|35I9}
 39i40 y{22|35I9}
-40U13*alPushP 40>22 40>32 40>59 61b<c,PushP>22
+40U13*alPushP 40>22 40>32 40>59 63b<c,PushP>22
 40i22 cmd{22|35I9}
 40p32 param1{23|47P9}
 40p59 param2{23|47P9}
-42U13*alBillBoardBegin 68b<c,alBillBoardBegin>22
-43U13*alBillBoardEnd 69b<c,alBillBoardEnd>22
-44U13*alTriangle 44>24 63b<c,alTriangle>22
-44f24 size{22|64F9}
-45U13*alLine 45>20 45>33 45>46 45>59 64b<c,alLine>22
-45f20 x1{22|64F9}
-45f33 y1{22|64F9}
-45f46 x2{22|64F9}
-45f59 y2{22|64F9}
-46U13*alCircle 46>22 46>33 65b<c,alCircle>22
-46f22 r{22|64F9}
-46i33 segments{22|35I9}
-47U13*alRect 47>20 47>31 66b<c,alRect>22
-47f20 w{22|64F9}
-47f31 h{22|64F9}
-48U13*alLoadModel 48>25 48>49 48>74 48>83 70b<c,alLoadModel>22
-48p25 alx{23|47P9}
-48p49 tga{23|47P9}
-48i74 id{22|35I9}
-48f83 size{22|64F9}
-49U13*alDrawModel 49>26 71b<c,alDrawModel>22
-49i26 id{22|35I9}
-50U13*alDrawModelTranslateRotate 50>41 51>44 51>66 51>89 52>44 52>66 52>85
-. 52>104 53>44 53>67 72b<c,alDrawModelTranslateRotate>22
-50i41 id{22|35I9}
-51f44 posx{22|64F9}
-51f66 posy{22|64F9}
-51f89 posz{22|64F9}
-52f44 angle{22|64F9}
-52f66 x{22|64F9}
-52f85 y{22|64F9}
-52f104 z{22|64F9}
-53i44 rotatefirst{22|35I9}
-53i67 billboard{22|35I9}
-56U15*alTranslateRotate 57>44 57>66 57>89 58>44 58>66 58>85 58>104 73b<c,alTranslateRotate>22
-57f44 posx{22|64F9}
-57f66 posy{22|64F9}
-57f89 posz{22|64F9}
-58f44 angle{22|64F9}
-58f66 x{22|64F9}
-58f85 y{22|64F9}
-58f104 z{22|64F9}
+42U13*alBillBoardBegin 71b<c,alBillBoardBegin>22
+43U13*alBillBoardEnd 72b<c,alBillBoardEnd>22
+44U13*alLoadIdentity 70b<c,alLoadIdentity>22
+45U13*alaluLookAt 45>25 45>38 45>50 45>63 45>76 45>89 45>101 45>113 45>125
+. 77b<c,alaluLookAt>22
+45f25 x1{22|64F9}
+45f38 y1{22|64F9}
+45f50 z1{22|64F9}
+45f63 x2{22|64F9}
+45f76 y2{22|64F9}
+45f89 z2{22|64F9}
+45f101 x{22|64F9}
+45f113 y{22|64F9}
+45f125 z{22|64F9}
+46U13*alTriangle 46>24 65b<c,alTriangle>22
+46f24 size{22|64F9}
+47U13*alLine 47>20 47>33 47>46 47>59 66b<c,alLine>22
+47f20 x1{22|64F9}
+47f33 y1{22|64F9}
+47f46 x2{22|64F9}
+47f59 y2{22|64F9}
+48U13*alCircle 48>22 48>33 67b<c,alCircle>22
+48f22 r{22|64F9}
+48i33 segments{22|35I9}
+49U13*alRect 49>20 49>31 68b<c,alRect>22
+49f20 w{22|64F9}
+49f31 h{22|64F9}
+50U13*alLoadModel 50>25 50>49 50>74 50>83 73b<c,alLoadModel>22
+50p25 alx{23|47P9}
+50p49 tga{23|47P9}
+50i74 id{22|35I9}
+50f83 size{22|64F9}
+51U13*alDrawModel 51>26 74b<c,alDrawModel>22
+51i26 id{22|35I9}
+52U13*alDrawModelTranslateRotate 52>41 53>44 53>66 53>89 54>44 54>66 54>85
+. 54>104 55>44 55>67 75b<c,alDrawModelTranslateRotate>22
+52i41 id{22|35I9}
+53f44 posx{22|64F9}
+53f66 posy{22|64F9}
+53f89 posz{22|64F9}
+54f44 angle{22|64F9}
+54f66 x{22|64F9}
+54f85 y{22|64F9}
+54f104 z{22|64F9}
+55i44 rotatefirst{22|35I9}
+55i67 billboard{22|35I9}
+58U15*alTranslateRotate 59>44 59>66 59>89 60>44 60>66 60>85 60>104 76b<c,alTranslateRotate>22
+59f44 posx{22|64F9}
+59f66 posy{22|64F9}
+59f89 posz{22|64F9}
+60f44 angle{22|64F9}
+60f66 x{22|64F9}
+60f85 y{22|64F9}
+60f104 z{22|64F9}
 X 20 cmd.ads
 3K9*CMD 19|6w6 6r15 20|49e8
 X 21 interfac.ads
 38K9*Interfaces 19|2r6 2r24 3r6 3r32 21|184e15
 X 22 i-c.ads
 18K20*C 19|2w17 2r35 3r17 3r43 22|230e17
-35I9*int<integer> 19|32r20 39r27 39r35 39r43 40r27 46r43 48r78 49r30 50r45
-. 53r57 53r78
-64F9*C_float<float> 19|44r30 45r24 45r37 45r50 45r63 46r25 47r23 47r34 48r89
-. 51r50 51r73 51r95 52r51 52r69 52r88 52r107 57r50 57r73 57r95 58r51 58r69
-. 58r88 58r107
+35I9*int<integer> 19|32r20 39r27 39r35 39r43 40r27 48r43 50r78 51r30 52r45
+. 55r57 55r78
+64F9*C_float<float> 19|45r29 45r42 45r54 45r67 45r80 45r92 45r104 45r116
+. 45r127 46r30 47r24 47r37 47r50 47r63 48r25 49r23 49r34 50r89 53r50 53r73
+. 53r95 54r51 54r69 54r88 54r107 59r50 59r73 59r95 60r51 60r69 60r88 60r107
 X 23 i-cstrin.ads
-36K22*Strings 19|3w19 3r45 40r40 40r67 48r30 48r54 23|106e25
-47P9*chars_ptr 19|40r48 40r75 48r38 48r62
+36K22*Strings 19|3w19 3r45 40r40 40r67 50r30 50r54 23|106e25
+47P9*chars_ptr 19|40r48 40r75 50r38 50r62
 
