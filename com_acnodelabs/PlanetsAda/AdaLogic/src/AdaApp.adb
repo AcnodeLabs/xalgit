@@ -6,6 +6,8 @@ package body AdaApp is
    voyager : GameObject;
    panel   : GameObject;
    star    : GameObject;
+   cockpit : GameObject;
+
    NUMSTARS: constant int := 350;
 
    type pos_array is array (1..NUMSTARS) of Position;
@@ -53,12 +55,15 @@ package body AdaApp is
       panel.modelId := 1;
       alLoadModel(New_String("misc.alx")       , New_String("misc.tga")        , int(panel.modelId) , 1.0);
 
-      star.modelId := 2;
-      alLoadModel(New_String("star.alx"), New_String("star.tga"), int(star.modelId), 0.1);
+      cockpit.modelId := 2;
+      alLoadModel(New_String("rect1.alx")       , New_String("cockpit_1.tga")        , int(cockpit.modelId) , 1.0);
+
+      star.modelId := 3;
+      alLoadModel(New_String("star.alx"), New_String("star.tga"), int(star.modelId), 0.3);
 
       for n in 0..8
         loop
-        planets(n).modelId := int (3 + n);
+        planets(n).modelId := int (4 + n);
         alLoadModel(New_String("sphere.alx")  , planet_tga(n) ,  int(planets(n).modelId), C_float(planet_size(n)*sc));
       end loop;
 
@@ -104,7 +109,7 @@ package body AdaApp is
                                     posx        => C_float(starpos(n).values.x),
                                     posy        => C_float(starpos(n).values.y),
                                     posz        => C_float(starpos(n).values.z),
-                                    angle       => C_float(angle1),
+                                    angle       => 0.0,--C_float(angle1),
                                     y           => 1.0,
                                     rotatefirst => 1,
                                     billboard   => 1
@@ -114,14 +119,28 @@ package body AdaApp is
    end renderStars;
 
    procedure AnimDo is
+
       begin
+
+        if nseq=0 then
+         tgt.x := 0.0;
+         tgt.y := 0.0;
+         tgt.z := 0.0;
+	 eye.x := 0.0;
+	 eye.y := 0.0;
+         eye.z := Float(bz);-- -alModelBounds(planets(planetNo).modelId)*0.005;
+         Put_Line(eye.z'Image);
+	 eyerot.z := 0.0;
+	 keyframe := 1;
+        end if;
+
          if nseq=ANIMSEQ_SURFACE and keyframe=1 then
-            tgt.x := QuadraticEaseIn(animstep, 0.0, -bz * 1.02);
+            tgt.x := QuadraticEaseIn(animstep, 0.0, -Float(bz) * 1.02);
             tgt.y := QuadraticEaseIn(animstep, 0.0, 0.0);
             tgt.z := QuadraticEaseIn(animstep, 0.0, 0.0);
-            eye.x := QuadraticEaseIn(animstep, 0.0, -bz * 1.02);
+            eye.x := QuadraticEaseIn(animstep, 0.0, -Float(bz) * 1.02);
             eye.y := QuadraticEaseIn(animstep, 0.0, 0.0);
-            eye.z := QuadraticEaseIn(animstep, - (bz*5.0), -(bz * 1.02));
+            eye.z := QuadraticEaseIn(animstep, - (-Float(bz) *5.0), -(-Float(bz)  * 1.02));
             eyerot.z := QuadraticEaseIn(animstep, 0.0, 90.0);
             animstep := incAnim(animstep);
             if animstep>1.0 then animstep:=0.0; nseq:=0; end if;
@@ -133,33 +152,34 @@ package body AdaApp is
    begin
       angle1 := float(timeVar) * FACTOR_RADIANS_DEGREES ; -- Convert to Degrees
 
-      -- draw panel
-      alDrawModelTranslateRotate(id => panel.modelId, posy => 1.0, angle => 180.0, z => 1.0 );
+       -- draw cockpit
+   --   alAlphaTest(set_unset => 0);
+      -- draw cockpit
+      alAlphaTest(set_unset => 1);
+      alDrawModelTranslateRotate(id => cockpit.modelId );
 
       --set spin
-      alTranslateRotate( angle => C_float(angle1),  y => 1.0);
+      -- alTranslateRotate( angle => C_float(angle1),  y => 1.0);
 
-         renderStars;
+      alaluLookAt(C_float(eye.x),C_float(eye.y),C_float(eye.z), 0.0,0.0,0.0, 0.0, 1.0, 0.0);
 
 
+      renderStars;
 
       AnimDo;
-      alTranslateRotate(angle => C_float(eyerot.z),z => 1.0);
-      alaluLookAt(x1 => C_float(eye.x),
-                  y1 => C_float(eye.y),
-                  z1 => C_float(eye.z),
-                  x2 => C_float(tgt.x),
-                  y2 => C_float(tgt.y),
-                  z2 => C_float(tgt.z),
-                  x  => 0.0,
-                  y  => 1.0,
-                  z  => 0.0);
 
-      -- drawPlanet
-      alDrawModel(id => planets(planetNo).modelId)  ;
+      alDrawModel(id => planets(planetNo).modelId);
 
-      -- pos rot and draw voyager
+      alPushMatrix;
+      alTranslateRotate( angle => C_float(angle1),  y => 1.0);
       alDrawModelTranslateRotate(id => voyager.modelId, posz  => 1.0, angle => 180.0,  y => 1.0);
+
+      alPopMatrix;-- undo rotation
+
+
+      -- draw panel
+  --    alDrawModelTranslateRotate(id => panel.modelId, posy => 1.0, angle => 180.0, z => 1.0 );
+
 
    end Render;
 
@@ -174,6 +194,8 @@ package body AdaApp is
          spit := True;
          screenX := i1;
          screenY := i2;
+         -- scaleModels
+        alScaleModel(cockpit.modelId,1.0+C_float(i1)/C_float(i2),1.5,1.0);
       end if;
 
       if command = CMD.TOUCH_END then

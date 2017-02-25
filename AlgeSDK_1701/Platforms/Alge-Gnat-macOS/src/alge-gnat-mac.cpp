@@ -150,6 +150,21 @@ void sndPlay(int id) {
 }
 
 
+extern "C" void alAlphaTest(int set_unset, float fA) {
+  
+  if (set_unset) {
+    glAlphaFunc(GL_GREATER, fA);
+    glEnable(GL_ALPHA_TEST);
+  // glDisable(GL_DEPTH_TEST);
+  //  glEnable(GL_BLEND);
+  //  glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+  //  glBlendEquation(GL_FUNC_ADD);
+  } else {
+    glDisable(GL_ALPHA_TEST);
+  }
+}
+
+
 extern "C" void alBillBoardBegin() {
   billboardBegin();
 
@@ -157,6 +172,14 @@ extern "C" void alBillBoardBegin() {
 
 extern "C" void alLoadIdentity() {
   glLoadIdentity();
+}
+
+extern "C" void alPushMatrix() {
+  glPushMatrix();
+}
+
+extern "C" void alPopMatrix() {
+  glPopMatrix();
 }
 
 extern "C" void alaluLookAt(float x1, float y1, float z1, float x2, float y2, float z2, float x, float y, float z) {
@@ -206,9 +229,18 @@ extern "C" void alDrawModelTranslateRotate(int id, float posx , float posy, floa
   glPopMatrix();
 }
 
+extern "C" void alScaleModel(int id, float sx, float sy, float sz) {
+ app.rm.models[id]->SetScale(sx,sy,sz);
+}
+
 extern "C" void alDrawModel(int id) {
   app.rm.models[id]->glDraw();
 }
+
+extern "C" float alModelBounds(int id) {
+ return app.rm.models[id]->boundz();
+}
+
 
 extern "C" void alTranslateRotate( float posx , float posy, float posz, 
 					             float angle,float x, float y,float z) {
@@ -332,7 +364,7 @@ static void HandleReshape( const int width, const int height )
         glLoadIdentity();									// Reset The Projection Matrix
         
         // Calculate The Aspect Ratio Of The Window
-        gluPerspective(45.0f,(GLfloat)width/(GLfloat)height,0.1f,100.0f);
+        gluPerspective(45.0f,(GLfloat)width/(GLfloat)height,0.001f,100.0f);
         
         glMatrixMode(GL_MODELVIEW);							// Select The Modelview Matrix
         glLoadIdentity();
@@ -439,7 +471,9 @@ int main( int argc, char** argv )
     glutMotionFunc( HandleMotion );
     HandleMotion( 0, 0 );
     
-    // Setup default render states
+  // Setup default render states
+
+     
     glClearColor( 0.3f, 0.3f, 0.3f, 1.0 );
     glEnable( GL_DEPTH_TEST );
     //glEnable( GL_COLOR_MATERIAL );

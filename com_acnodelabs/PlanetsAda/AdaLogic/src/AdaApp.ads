@@ -43,7 +43,7 @@ package AdaApp is
    animstep : Float := 0.0;
    animStepTimed : CTimed.CTimedT;
    deltaT : Float;
-   bz : Float := 1.0;
+   bz : C_float := 1.0;
    nseq : Integer := 0;
 end AdaApp;
 

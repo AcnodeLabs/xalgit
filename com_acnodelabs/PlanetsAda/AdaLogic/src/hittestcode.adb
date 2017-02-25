@@ -26,8 +26,7 @@ package body HitTestCode is
    begin
 
       if (touchedX >= aBound.xMin and touchedX <= aBound.xMax and
-         touchedY >= aBound.yMin and touchedY <= aBound.yMax
-         ) then
+         touchedY >= aBound.yMin and touchedY <= aBound.yMax) then
          lastHitName := Integer(aBound.name);
       end if;
 

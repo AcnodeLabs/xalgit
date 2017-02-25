@@ -41,14 +41,19 @@ with CMD; use CMD;
 
   procedure alBillBoardBegin;
   procedure alBillBoardEnd;
-  procedure alLoadIdentity;
+   procedure alLoadIdentity;
+   procedure alPushMatrix;
+   procedure alPopMatrix;
   procedure alaluLookAt(x1: C_float; y1: C_float;z1: C_float; x2: C_float; y2: C_float; z2:C_float; x: C_float; y: C_float; z:C_float);
   procedure alTriangle(size: C_float);
   procedure alLine(x1: C_float; y1: C_float; x2: C_float; y2: C_float);
   procedure alCircle(r: C_float;segments: Int);
   procedure alRect(w: C_float;h: C_float);
   procedure alLoadModel(alx: Strings.chars_ptr; tga: Strings.chars_ptr ; id: int; size: C_float);
-  procedure alDrawModel (id: int);
+   procedure alDrawModel (id: int);
+   procedure alScaleModel(id: int; sx: C_float; sy: C_float;sz: C_float);
+   procedure alAlphaTest (set_unset: int; fA: C_float := 0.4); -- 0=>unset ; 1=>set GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+  function alModelBounds(id: int) return float;
   procedure alDrawModelTranslateRotate (id: int;
                                            posx: C_float := 0.0 ;posy : C_float := 0.0 ;posz :C_float := 0.0;
                                            angle: C_float := 0.0;x: C_float := 0.0 ;y: C_float := 0.0; z: C_float := 0.0;
@@ -75,5 +80,11 @@ with CMD; use CMD;
    pragma Import (C, alDrawModelTranslateRotate, "alDrawModelTranslateRotate");
    pragma Import (C, alTranslateRotate, "alTranslateRotate");
    pragma Import (C, alaluLookAt, "alaluLookAt");
+   pragma Import (C, alModelBounds, "alModelBounds");
+   pragma Import (C, alAlphaTest, "alAlphaTest");
+   pragma Import (C, alScaleModel, "alScaleModel");
+   pragma Import (C, alPushMatrix, "alPushMatrix");
+   pragma Import (C, alPopMatrix, "alPopMatrix");
+
 
   end AlgeSDK;
