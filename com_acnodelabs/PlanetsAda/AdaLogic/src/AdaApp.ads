@@ -32,12 +32,17 @@ package AdaApp is
    pragma export (CPP, ProcessInput, "AppProcessInput");
 
    -- App Specific
-   ANIMSEQ_SPHERE: constant Integer	:= 1;
-   ANIMSEQ_SURFACE: constant Integer	:= 2;
-   ANIMSEQ_LAND: constant Integer	:= 3;
-   ANIMSEQ_SLINGSHOT: constant Integer	:= 4;
+
+   ANIMSEQ_CROSSING: constant Integer	:= 1;
+   ANIMSEQ_NEARING: constant Integer	:= 2;
+   ANIMSEQ_SPHERE: constant Integer	:= 3;
+   ANIMSEQ_SURFACE: constant Integer	:= 4;
+   ANIMSEQ_LAND: constant Integer	:= 5;
+   ANIMSEQ_SLINGSHOT: constant Integer	:= 6;
+
+
    keyframe : Integer := 1;
-   eye,eyerot,tgt : f3;
+   eye,eyerot,tgt,up : f3;
    procedure renderStars;
    procedure onHit(hitId: Integer);
    animstep : Float := 0.0;

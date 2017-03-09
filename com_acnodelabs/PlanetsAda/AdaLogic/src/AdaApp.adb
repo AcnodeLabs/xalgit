@@ -1,5 +1,5 @@
 with Ada.Numerics.Float_Random; use Ada.Numerics.Float_Random;
-
+with Ada.Numerics.Elementary_Functions; use Ada.Numerics.Elementary_Functions;
 
 package body AdaApp is
 
@@ -9,12 +9,19 @@ package body AdaApp is
    cockpit : GameObject;
 
    NUMSTARS: constant int := 350;
+   dist : Float := 80.0;
+   desiredDist : Float := 80.0;
+   speed : C_float := 15.0;
+   tilt : Float := 0.0;
+   desiredTilt : Float := 45.0;
+
 
    type pos_array is array (1..NUMSTARS) of Position;
    starpos : pos_array;
 
    planets : array (0..8) of GameObject;
-   planet_size : array (0..8) of Float := (4880.0,7500.0,7500.0,4444.0,9900.0,9500.0,8000.0,8000.0,4880.0);--Moon:=,2274.0);
+--   planet_size : array (0..8) of Float := (2440.0,6052.0,6371.0,3390.0,69911.0,58232.0,25362.0,24622.0,1440.0);--Moon:=,2274.0);
+  planet_size : array (0..8) of Float := (69911.0,69911.0,69911.0,69911.0,69911.0,69911.0,69911.0,69911.0,69911.0);--Moon:=,2274.0);
    planet_tga  : array (0..8) of chars_ptr := (
                                              New_String("mercury4k.tga"),
                                              New_String( "venus4_rgb_cyl_www.tga"),
@@ -36,6 +43,11 @@ package body AdaApp is
 
    rGen : Generator;
 
+
+   heading : Float := 220.0;
+   desiredHeading : Float := 225.0;
+
+
    function incAnim(animstep: in out Float ) return Float is
       begin
       if animstep=0.0 then CTimed.Set(0.0,1.0,0.2,animStepTimed); CTimed.ReDo(animStepTimed); end if;
@@ -48,35 +60,42 @@ package body AdaApp is
       use Ada.Numerics.Float_Random;
    begin
 
-      voyager.modelId := 0;
-      voyager.scale := 0.015;
-      alLoadModel(New_String("voyager2.alx") , New_String("voyager2.tga") , int(voyager.modelId) , C_float(voyager.scale));
-
-      panel.modelId := 1;
-      alLoadModel(New_String("misc.alx")       , New_String("misc.tga")        , int(panel.modelId) , 1.0);
-
-      cockpit.modelId := 2;
-      alLoadModel(New_String("rect1.alx")       , New_String("cockpit_1.tga")        , int(cockpit.modelId) , 1.0);
-
-      star.modelId := 3;
-      alLoadModel(New_String("star.alx"), New_String("star.tga"), int(star.modelId), 0.3);
+      alAlphaTest(enable => 1);
 
       for n in 0..8
         loop
-        planets(n).modelId := int (4 + n);
+        planets(n).modelId := int (n);
         alLoadModel(New_String("sphere.alx")  , planet_tga(n) ,  int(planets(n).modelId), C_float(planet_size(n)*sc));
       end loop;
 
+      voyager.modelId := 9;
+      voyager.scale := 0.015;
+      alLoadModel(New_String("voyager2.alx") , New_String("voyager2.tga") , int(voyager.modelId) , C_float(voyager.scale));
+
+      panel.modelId := 10;
+      alLoadModel(New_String("misc.alx")       , New_String("misc.tga")        , int(panel.modelId) , 1.0);
+
+      cockpit.modelId := 11;
+      alLoadModel(New_String("rect1.alx")       , New_String("cockpit_1.tga")        , int(cockpit.modelId) , 1.0);
+
+      star.modelId := 12;
+      alLoadModel(New_String("star.alx"), New_String("star.tga"), int(star.modelId), 0.3);
+
+
       Reset(rGen);
 
-      for n in 1..NUMSTARS
+      --SUN
+      starpos(1).values.x := 3.0;
+      starpos(1).values.y := 0.0;
+      starpos(1).values.z := -120.0;
+
+      for n in 2..NUMSTARS
       loop
          starpos(n).values.x := Random(rGen)*180.0-100.0;
          starpos(n).values.y := Random(rGen)*180.0-100.0;
-         starpos(n).values.z := Random(rGen)*180.0-100.0;
+         starpos(n).values.z := Random(rGen)*0.0-800.0;
    --
       end loop;
-
 
 
       -- Load Sounds
@@ -92,10 +111,19 @@ package body AdaApp is
 
    end Init;
 
-   procedure Update(dt : Interfaces.C.C_float) is
+
+   procedure updateVar(deltaT: C_float; var :in out Float; varTo : in out Float) is
    begin
-      deltaT := Float(dt);
-      timeVar := timeVar + dt;
+      if var < varTo then var := var + Float(speed) * Float(deltaT) * 0.1 * abs(var - varTo); end if;
+      if var > varTo then var := var - Float(speed) * Float(deltaT) * 0.1 * abs(var - varTo); end if;
+   end updateVar;
+
+
+   procedure Update(dt : Interfaces.C.C_float) is
+    begin
+      updateVar(dt, tilt, desiredTilt);
+      updateVar(dt, dist, desiredDist);
+      updateVar(dt, heading, desiredHeading);
    end Update;
 
    procedure renderStars is
@@ -118,67 +146,76 @@ package body AdaApp is
       end loop;
    end renderStars;
 
-   procedure AnimDo is
 
-      begin
+   procedure renderPlanets is
 
-        if nseq=0 then
-         tgt.x := 0.0;
-         tgt.y := 0.0;
-         tgt.z := 0.0;
-	 eye.x := 0.0;
-	 eye.y := 0.0;
-         eye.z := Float(bz);-- -alModelBounds(planets(planetNo).modelId)*0.005;
-         Put_Line(eye.z'Image);
-	 eyerot.z := 0.0;
-	 keyframe := 1;
-        end if;
+      angleStep : C_float := 45.0;
+      nr : Integer;
+   begin
+      alPushMatrix;
+      for n in 0..8
 
-         if nseq=ANIMSEQ_SURFACE and keyframe=1 then
-            tgt.x := QuadraticEaseIn(animstep, 0.0, -Float(bz) * 1.02);
-            tgt.y := QuadraticEaseIn(animstep, 0.0, 0.0);
-            tgt.z := QuadraticEaseIn(animstep, 0.0, 0.0);
-            eye.x := QuadraticEaseIn(animstep, 0.0, -Float(bz) * 1.02);
-            eye.y := QuadraticEaseIn(animstep, 0.0, 0.0);
-            eye.z := QuadraticEaseIn(animstep, - (-Float(bz) *5.0), -(-Float(bz)  * 1.02));
-            eyerot.z := QuadraticEaseIn(animstep, 0.0, 90.0);
-            animstep := incAnim(animstep);
-            if animstep>1.0 then animstep:=0.0; nseq:=0; end if;
-         end if;
-   end AnimDo;
+      loop
+        -- bearing := angleStep * C_float(n);
+         nr := 8 - n;
+         -- only draw planets in front
+       --  if bearing > 270.0 and then bearing < 90.0 then
+
+         alPushMatrix;
+            alTranslateRotate(posz => C_float(dist));
+         --if Integer(planets(n).modelId) = planetNo then
+            Put_Line("desiredHeading=" & desiredHeading'Image);
+            alDrawModel(id => planets(nr).modelId);
+         --end if;
+         alPopMatrix;
+       --  end if;
+
+         alTranslateRotate(angle => angleStep, y => 1.0);
+      end loop;
+      alPopMatrix;
+   end renderPlanets;
 
    procedure Render is
      angle1 : float := 0.0;
    begin
-      angle1 := float(timeVar) * FACTOR_RADIANS_DEGREES ; -- Convert to Degrees
+      angle1 := float(timeVar) * FACTOR_RADIANS_DEGREES * 0.001; -- Convert to Degrees
+      angle1 := 0.0;
 
        -- draw cockpit
    --   alAlphaTest(set_unset => 0);
-      -- draw cockpit
-      alAlphaTest(set_unset => 1);
-      alDrawModelTranslateRotate(id => cockpit.modelId );
+
+
 
       --set spin
-      -- alTranslateRotate( angle => C_float(angle1),  y => 1.0);
+      alPushMatrix; -- save for cockpit
+      alTranslateRotate( angle => C_float(tilt),  z => 1.0);
+      alTranslateRotate(angle => C_float(heading), y => 1.0);
 
-      alaluLookAt(C_float(eye.x),C_float(eye.y),C_float(eye.z), 0.0,0.0,0.0, 0.0, 1.0, 0.0);
-
+     -- alaluLookAt(C_float(eye.x),C_float(eye.y),C_float(eye.z),
+     --            C_float(tgt.x),C_float(tgt.y),C_float(tgt.z),
+      --            C_float(up.x), C_float(up.y), C_float(up.z));
 
       renderStars;
 
-      AnimDo;
 
-      alDrawModel(id => planets(planetNo).modelId);
+      renderPlanets;
 
       alPushMatrix;
+      angle1 := 0.0;
       alTranslateRotate( angle => C_float(angle1),  y => 1.0);
-      alDrawModelTranslateRotate(id => voyager.modelId, posz  => 1.0, angle => 180.0,  y => 1.0);
+      alDrawModelTranslateRotate(id => voyager.modelId, posz  => 4.0, angle => 180.0,  y => 1.0);
 
       alPopMatrix;-- undo rotation
 
+      alPopMatrix;
+        -- draw cockpit
 
+
+      alDrawModelTranslateRotate(id => cockpit.modelId );
+
+   --   eye.z := eye.z - angle1 * 0.1;
       -- draw panel
-  --    alDrawModelTranslateRotate(id => panel.modelId, posy => 1.0, angle => 180.0, z => 1.0 );
+      -- alDrawModelTranslateRotate(id => panel.modelId, posy => 1.0, angle => 180.0, z => 1.0 );
 
 
    end Render;
@@ -206,8 +243,14 @@ package body AdaApp is
 
       if command = CMD.TOUCH_START then
 
---     planetNo := planetNo + 1;
---     if planetNo > 8 then planetNo := 0; end if;
+     planetNo := planetNo + 1;
+     desiredHeading := 225.0 + Float(planetNo) * 45.0;
+     if planetNo = 0 then desiredHeading := 225.0; end if;
+     if heading > 225.0 + 8.0 * 45.0 then heading := 225.0;  end if;
+     if desiredHeading > 225.0 + 8.0 * 45.0 then desiredHeading := 225.0;  end if;
+
+
+     if planetNo > 8 then planetNo := 0; end if;
 
          hitId := HitTestCode.DoIt(Float(i1)/ Float(1190), Float(i2)/ Float(700));
          if hitId>=1 and hitId<=5 then onHit(hitId); end if;
@@ -217,8 +260,6 @@ package body AdaApp is
       Text_IO.Put_Line(Integer'Image(Standard.Integer(command)) & "=(" & Integer'Image(Standard.Integer(i1)) & "," & Integer'Image(Standard.Integer(i2)) & ")");
 
    end ProcessInput;
-
-
 
 
    procedure onHit(hitId: Integer) is

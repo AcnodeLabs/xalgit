@@ -17,20 +17,20 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U ada_main%b		b__planetsada.adb	bf5fcbf2 NE OO PK IL
+U ada_main%b		b__planetsada.adb	5544d7b1 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__planetsada.ads	fb17ad9a EE NE OO PK IL
+U ada_main%s		b__planetsada.ads	aad706b4 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-except.ads		20160516092928 291912d5 ada.exceptions%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D b__planetsada.ads	20170225165257 383f873d ada_main%s
-D b__planetsada.adb	20170225165257 b5e45868 ada_main%b
+D b__planetsada.ads	20170309182953 69ff2c13 ada_main%s
+D b__planetsada.adb	20170309182953 0e3fef05 ada_main%b
 D system.ads		20160516092930 c3282aa7 system%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
 D s-restri.ads		20160516092928 1b9d0672 system.restrictions%s
@@ -298,35 +298,35 @@ X 4 b__planetsada.ads
 471m4*u00230{12M9} 472r22
 473m4*u00231{12M9} 474r22
 X 5 b__planetsada.adb
-12i4 E159{short_integer} 12m46 12r46 375r10 378m7 378r15
+12i4 E167{short_integer} 12m46 12r46 375r10 378m7 378r15
 13i4 E024{short_integer} 13m46 13r46 275r10 371r10 374m7 374r15
 14i4 E022{short_integer} 14m46 14r46 278r10 281m7 281r15
-15i4 E110{short_integer} 15m46 15r46 282r10 285m7 285r15
-16i4 E137{short_integer} 16m46 16r46 286r10 289m7 289r15
+15i4 E118{short_integer} 15m46 15r46 282r10 285m7 285r15
+16i4 E145{short_integer} 16m46 16r46 286r10 289m7 289r15
 17i4 E019{short_integer} 17m46 17r46 290r10 293m7 293r15
-18i4 E111{short_integer} 18m46 18r46 294r10 297m7 297r15
-19i4 E117{short_integer} 19m46 19r46 298r10 370m7 370r15
-20i4 E085{short_integer} 20m46 20r46 301r10 366r10 369m7 369r15
-21i4 E136{short_integer} 21m46 21r46 304r10 307m7 307r15
-22i4 E075{short_integer} 22m46 22r46 308r10 365m7 365r15
-23i4 E149{short_integer} 23m46 23r46 311r10 364m7 364r15
+18i4 E119{short_integer} 18m46 18r46 294r10 297m7 297r15
+19i4 E125{short_integer} 19m46 19r46 298r10 370m7 370r15
+20i4 E094{short_integer} 20m46 20r46 301r10 366r10 369m7 369r15
+21i4 E144{short_integer} 21m46 21r46 304r10 307m7 307r15
+22i4 E084{short_integer} 22m46 22r46 308r10 365m7 365r15
+23i4 E157{short_integer} 23m46 23r46 311r10 364m7 364r15
 24i4 E036{short_integer} 24m46 24r46 314r10 317m7 317r15
-25i4 E162{short_integer} 25m46 25r46 318r10 321m7 321r15
-26i4 E157{short_integer} 26m46 26r46 126m10 126r18 127r13 360r10 363m7 363r15
-27i4 E139{short_integer} 27m46 27r46 322r10 325m7 325r15
-28i4 E134{short_integer} 28m46 28r46 326r10 329m7 329r15
-29i4 E141{short_integer} 29m46 29r46 330r10 333m7 333r15
-30i4 E129{short_integer} 30m46 30r46 131m7 131r15 154r13 334r10 356r10 359m7
+25i4 E170{short_integer} 25m46 25r46 318r10 321m7 321r15
+26i4 E165{short_integer} 26m46 26r46 126m10 126r18 127r13 360r10 363m7 363r15
+27i4 E147{short_integer} 27m46 27r46 322r10 325m7 325r15
+28i4 E142{short_integer} 28m46 28r46 326r10 329m7 329r15
+29i4 E149{short_integer} 29m46 29r46 330r10 333m7 333r15
+30i4 E137{short_integer} 30m46 30r46 131m7 131r15 154r13 334r10 356r10 359m7
 . 359r15
-31i4 E127{short_integer} 31m46 31r46 132m7 132r15 146r13 337r10 355m7 355r15
-32i4 E073{short_integer} 32m46 32r46 340r10 343r10 346m7 346r15
+31i4 E135{short_integer} 31m46 31r46 132m7 132r15 146r13 337r10 355m7 355r15
+32i4 E082{short_integer} 32m46 32r46 340r10 343r10 346m7 346r15
 33i4 E174{short_integer} 33m46 33r46 133m7 133r15 138r13 347r10 350m7 350r15
-34i4 E071{short_integer} 34m46 34r46 351r10 354m7 354r15
+34i4 E080{short_integer} 34m46 34r46 351r10 354m7 354r15
 35i4 E028{short_integer} 35m46 35r46 379r10 382m7 382r15
-36i4 E113{short_integer} 36m46 36r46 113m7 113r15 118r13 383r10 386m7 386r15
+36i4 E121{short_integer} 36m46 36r46 113m7 113r15 118r13 383r10 386m7 386r15
 37i4 E207{short_integer} 37m46 37r46 387r10 390m7 390r15
 38i4 E231{short_integer} 38m46 38r46 391r10 394r10 397m7 397r15
-39i4 E152{short_integer} 39m46 39r46 104m7 104r15 109r13 398r10 401r10 404m7
+39i4 E160{short_integer} 39m46 39r46 104m7 104r15 109r13 398r10 401r10 404m7
 . 404r15
 40i4 E215{short_integer} 40m46 40r46 405r10 408m7 408r15
 41i4 E219{short_integer} 41m46 41r46 95m7 95r15 100r13 409r10 412m7 412r15

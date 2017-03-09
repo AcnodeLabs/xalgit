@@ -52,7 +52,7 @@ with CMD; use CMD;
   procedure alLoadModel(alx: Strings.chars_ptr; tga: Strings.chars_ptr ; id: int; size: C_float);
    procedure alDrawModel (id: int);
    procedure alScaleModel(id: int; sx: C_float; sy: C_float;sz: C_float);
-   procedure alAlphaTest (set_unset: int; fA: C_float := 0.4); -- 0=>unset ; 1=>set GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+   procedure alAlphaTest (enable: int; fA: C_float := 0.4); -- 0=>unset ; 1=>set GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
   function alModelBounds(id: int) return float;
   procedure alDrawModelTranslateRotate (id: int;
                                            posx: C_float := 0.0 ;posy : C_float := 0.0 ;posz :C_float := 0.0;

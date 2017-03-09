@@ -18,16 +18,18 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U adaapp%b		adaapp.adb		41ef0719 OO PK
+U adaapp%b		adaapp.adb		07c7ef7c OO PK
 W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
 W ada.numerics.float_random%s  a-nuflra.adb	a-nuflra.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
 W system.concat_6%s	s-conca6.adb		s-conca6.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.img_real%s	s-imgrea.adb		s-imgrea.ali
 
-U adaapp%s		adaapp.ads		d544853f EE OO PK
+U adaapp%s		adaapp.ads		c25bd394 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -66,9 +68,9 @@ D a-strunb.ads		20160516092928 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
 D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D adaapp.ads		20170217180924 9f78d28b adaapp%s
-D adaapp.adb		20170225165255 9ec17ee8 adaapp%b
-D algesdk.ads		20170225164633 89eba378 algesdk%s
+D adaapp.ads		20170309162621 a5c0d130 adaapp%s
+D adaapp.adb		20170309182952 e1b9a82a adaapp%b
+D algesdk.ads		20170307172039 a44cf668 algesdk%s
 D canimator.ads		20170216174918 c146b98b canimator%s
 D cmd.ads		20160920153708 94636470 cmd%s
 D ctimed.ads		20170216182314 03d9e21e ctimed%s
@@ -79,6 +81,7 @@ D i-cstrin.ads		20160516092930 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
 D system.ads		20160516092930 c3282aa7 system%s
 D s-atocou.ads		20160516092932 b45c2d8d system.atomic_counters%s
+D s-conca2.ads		20160516092930 02a0d7d0 system.concat_2%s
 D s-conca6.ads		20160516092926 d2c72db2 system.concat_6%s
 D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
 D s-exctab.ads		20160516092930 54135002 system.exception_table%s
@@ -103,162 +106,178 @@ D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20160516092930 1b7d22d2 system.wch_con%s
 D text_io.ads		20160516092930 45d626c9 text_io%s
 X 1 ada.ads
-16K9*Ada 19e8 22|4r6 8r6 8r26 9r6 11r6 23|1r6 1r37 48r11
+16K9*Ada 19e8 22|4r6 8r6 8r26 9r6 11r6 23|1r6 1r37 2r6 2r45 60r11
 X 4 a-contai.ads
 16K13*Containers 24e19 22|8w10 8r30 9r10
 X 6 a-convec.ads
 46k24*Vectors 518e27 22|9w21
 57R9*Vector<8|43R9>
-245U14*Append 23|87s17[28|18] 88s17[28|18] 89s17[28|18] 90s17[28|18] 91s17[28|18]
+245U14*Append 23|106s17[28|18] 107s17[28|18] 108s17[28|18] 109s17[28|18]
+. 110s17[28|18]
 X 10 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[6|72]>
 X 11 a-numeri.ads
-16K13*Numerics 32e17 22|11r10 23|1r10 1r41 48r15
+16K13*Numerics 32e17 22|11r10 23|1r10 1r41 2r10 2r49 60r15
+X 12 a-nuelfu.ads
+18K22*Elementary_Functions[14|39] 23|2w19 2r58
 X 13 a-nuflra.ads
-41K22*Float_Random 74e30 22|11w19 23|1w19 1r50 48r24
-47R9*Generator<44|63R9> 23|37r11
+41K22*Float_Random 74e30 22|11w19 23|1w19 1r50 60r24
+47R9*Generator<45|63R9> 23|44r11
 49F12*Uniformly_Distributed{float}
-51V13*Random{49F12}<44|71p13> 23|74s33 75s33 76s33
-53U14*Reset<44|100p14> 23|70s7
+51V13*Random{49F12}<45|71p13> 23|94s33 95s33 96s33
+53U14*Reset<45|100p14> 23|85s7
 X 16 a-string.ads
 16K13*Strings 35e16 22|4r10
 X 18 a-strunb.ads
 76K21*Unbounded 489e26 22|4w18
 X 20 a-textio.ads
-263U14*Put_Line 23|85s7 132s10 217s15
+263U14*Put_Line 23|104s7 167s13 260s15
 X 22 adaapp.ads
-15K9*AdaApp 48l5 48e11 23|4b14 237l5 237t11
-17f4*timeVar{30|64F9} 23|98m7 98r18 104r23 153r23
+15K9*AdaApp 53l5 53e11 23|4b14 278l5 278t11
+17f4*timeVar{30|64F9} 23|132r23 181r23
 18i4*width{integer}
 19i4*height{integer}
 20r4*can{25|8R9}
-22U14*Init 29i<cpp,AppInit>24 23|47b14 93l8 93t12
-23U14*Update 23>21 30i<cpp,AppUpdate>24 23|95b14 99l8 99t14
-23f21 dt{30|64F9} 23|95b21 97r23 98r28
-24U14*Render 28i<cpp,AppRender>24 23|150b14 184l8 184t14
-25U14*ProcessInput 25>28 25>42 25>51 32i<cpp,AppProcessInput>24 23|186b14
-. 219l8 219t20
-25i28 command{30|35I9} 23|186b29 193r10 201r10 207r10 217r55
-25i42 i1{30|35I9} 23|186b43 195r21 198r50 212r42 217r105
-25i51 i2{30|35I9} 23|186b52 196r21 198r62 212r66 217r149
-26U14*DeInit 31i<cpp,AppDeInit>24 23|232b14 235l8 235t14
-35i4*ANIMSEQ_SPHERE{integer}
-36i4*ANIMSEQ_SURFACE{integer} 23|137r18 226r16 227r16
-37i4*ANIMSEQ_LAND{integer}
-38i4*ANIMSEQ_SLINGSHOT{integer}
-39i4*keyframe{integer} 23|134m10 137r38 228m10
-40r4*eye{24|12R9} 23|129m10 130m10 131m10 132r19 141m13 142m13 143m13 164r27
-. 164r42 164r57
-40r8*eyerot{24|12R9} 23|133m10 144m13
-40r15*tgt{24|12R9} 23|126m10 127m10 128m10 138m13 139m13 140m13
-41U14*renderStars 23|101b14 119l8 119t19 167s7
-42U14*onHit 42>20 23|213s40 224b14 230l8 230t13
-42i20 hitId{integer} 23|224b20 226r10
-43f4*animstep{float} 23|138r38 139r38 140r38 141r38 142r38 143r38 144r41
-. 145m13 145m33 145r33 146r16 146m34
-44r4*animStepTimed{27|6R9} 23|41m51 41r51 41m79 41r79 42m38 42r38
-45f4*deltaT{float} 23|42r30 97m7
-46f4*bz{30|64F9} 23|131r25 138r60 141r60 143r58 143r78
-47i4*nseq{integer} 23|125r12 137r13 146m49 227m10
+22U14*Init 29i<cpp,AppInit>24 23|59b14 112l8 112t12
+23U14*Update 23>21 30i<cpp,AppUpdate>24 23|122b14 127l8 127t14
+23f21 dt{30|64F9} 23|122b21 124r17 125r17 126r17
+24U14*Render 28i<cpp,AppRender>24 23|178b14 221l8 221t14
+25U14*ProcessInput 25>28 25>42 25>51 32i<cpp,AppProcessInput>24 23|223b14
+. 262l8 262t20
+25i28 command{30|35I9} 23|223b29 230r10 238r10 244r10 260r55
+25i42 i1{30|35I9} 23|223b43 232r21 235r50 255r42 260r105
+25i51 i2{30|35I9} 23|223b52 233r21 235r62 255r66 260r149
+26U14*DeInit 31i<cpp,AppDeInit>24 23|273b14 276l8 276t14
+36i4*ANIMSEQ_CROSSING{integer}
+37i4*ANIMSEQ_NEARING{integer}
+38i4*ANIMSEQ_SPHERE{integer}
+39i4*ANIMSEQ_SURFACE{integer} 23|267r16 268r16
+40i4*ANIMSEQ_LAND{integer}
+41i4*ANIMSEQ_SLINGSHOT{integer}
+44i4*keyframe{integer} 23|269m10
+45r4*eye{24|12R9}
+45r8*eyerot{24|12R9}
+45r15*tgt{24|12R9}
+45r19*up{24|12R9}
+46U14*renderStars 23|129b14 147l8 147t19 198s7
+47U14*onHit 47>20 23|256s40 265b14 271l8 271t13
+47i20 hitId{integer} 23|265b20 267r10
+48f4*animstep{float}
+49r4*animStepTimed{27|6R9} 23|53m51 53r51 53m79 53r79 54m38 54r38
+50f4*deltaT{float} 23|54r30
+51f4*bz{30|64F9}
+52i4*nseq{integer} 23|268m10
 X 23 adaapp.adb
-6r4 voyager{24|28R9} 51m7 52m7 53r81 53r108 175r40
-7r4 panel{24|28R9} 55m7 56r86
-8r4 star{24|28R9} 61m7 62r71 108r52
-9r4 cockpit{24|28R9} 58m7 59r92 159r40 198r22
-11i4 NUMSTARS{30|35I9} 13r32 72r19 105r19
-13A9 pos_array(24|17R9)<30|35I9> 14r14
-14a4 starpos{13A9} 74m10 75m10 76m10 109r60 110r60 111r60
-16a4 planets(24|28R9) 66m9 67r70 171r25
-17a4 planet_size(float) 67r99
-18a4 planet_tga(31|47P9) 67r49
-30f4 sc{float} 67r114
-31i4 planetNo{integer} 171r33
-32i4 iUnassigned{30|35I9} 34r22 35r22
-34i4 screenX{30|35I9} 195m10
-35i4 screenY{30|35I9} 196m10
-37r4 rGen{13|47R9} 70r13 74r40 75r40 76r40
-39V13 incAnim{float} 39b13 39=21 44l8 44t15 145s25
-39f21 animstep{float} 41r10 42m7 43r11
-64i11 n{integer} 66r17 66r40 67r60 67r78 67r111
-72i11 n<integer> 74r18 75r18 76r18
-102f7 angle1{float} 104m7
-105i11 n<integer> 109r68 110r68 111r68
-121U14 AnimDo 121b14 148l8 148t14 169s7
-151f6 angle1{float} 153m7 174r43
-187b7 spit{boolean} 191m7 194m10
-188i7 hitId{integer} 212m10 213r13 213r26 213r46
+6r4 voyager{24|28R9} 71m7 72m7 73r81 73r108 206r40
+7r4 panel{24|28R9} 75m7 76r86
+8r4 star{24|28R9} 81m7 82r71 136r52
+9r4 cockpit{24|28R9} 78m7 79r92 214r40 235r22
+11i4 NUMSTARS{30|35I9} 19r32 92r19 133r19
+12f4 dist{float} 125m21 125r21 165r47
+13f4 desiredDist{float} 125m27 125r27
+14f4 speed{30|64F9} 117r46 118r46
+15f4 tilt{float} 124m21 124r21 191r43
+16f4 desiredTilt{float} 124m27 124r27
+19A9 pos_array(24|17R9)<30|35I9> 20r14
+20a4 starpos{19A9} 88m7 89m7 90m7 94m10 95m10 96m10 137r60 138r60 139r60
+22a4 planets(24|28R9) 67m9 68r70 168r31
+24a3 planet_size(float) 68r99
+25a4 planet_tga(31|47P9) 68r49
+37f4 sc{float} 68r114
+38i4 planetNo{integer} 246m6 246r18 247r38 248r9 253r9 253m27
+39i4 iUnassigned{30|35I9} 41r22 42r22
+41i4 screenX{30|35I9} 232m10
+42i4 screenY{30|35I9} 233m10
+44r4 rGen{13|47R9} 85r13 94r40 95r40 96r40
+47f4 heading{float} 126m21 126r21 192r42 249r9 249m43
+48f4 desiredHeading{float} 126m30 126r30 167r42 247m6 248m27 250r9 250m50
+51V13 incAnim{float} 51b13 51=21 56l8 56t15
+51f21 animstep{float} 53r10 54m7 55r11
+65i11 n{integer} 67r17 67r36 68r60 68r78 68r111
+92i11 n<integer> 94r18 95r18 96r18
+115U14 updateVar 115b14 115>24 115=41 115=60 119l8 119t17 124s7 125s7 126s7
+115f24 deltaT{30|64F9} 117r61 118r61
+115f41 var{float} 117r10 117m27 117r34 117r81 118r10 118m27 118r34 118r81
+115f60 varTo{float} 117r16 117r87 118r16 118r87
+130f7 angle1{float} 132m7
+133i11 n<integer> 137r68 138r68 139r68
+150U14 renderPlanets 150b14 176l8 176t21 201s7
+152f7 angleStep{30|64F9} 173r37
+153i7 nr{integer} 160m10 168r39
+156i11 n{integer} 160r20
+179f6 angle1{float} 181m7 182m7 204m7 205r43
+224b7 spit{boolean} 228m7 231m10
+225i7 hitId{integer} 255m10 256r13 256r26 256r46
 X 24 algesdk.ads
 8K10*AlgeSDK 22|6w6 6r19 24|90e14
-10f4*FACTOR_RADIANS_DEGREES{float} 23|104r34 153r34
-12R9*f3 22|40r21 24|15e17
-14f10*x{float} 23|74m28 109r78 126m14 129m14 138m17 141m17 164r31
-14f12*y{float} 23|75m28 110r78 127m14 130m14 139m17 142m17 164r46
-14f14*z{float} 23|76m28 111r78 128m14 131m14 132r23 133m17 140m17 143m17
-. 144m20 164r61
-17R9*Position 23|13r45 24|20e17
-19r10*values{12R9} 23|74m21 75m21 76m21 109r71 110r71 111r71
-28R9*GameObject 23|6r14 7r14 8r14 9r14 16r30 24|34e17
-32i10*modelId{30|35I9} 23|51m15 53r89 55m13 56r92 58m15 59r100 61m12 62r76
-. 66m20 67r81 108r57 159r48 171r43 175r48 198r30
-33f10*scale{float} 23|52m15 53r116
-42U13*alBillBoardBegin 23|107s10
-43U13*alBillBoardEnd 23|117s10
-45U14*alPushMatrix 23|173s7
-46U14*alPopMatrix 23|177s7
-47U13*alaluLookAt 23|164s7
-52U13*alLoadModel 23|53s7 56s7 59s7 62s7 67s9
-53U14*alDrawModel 23|171s7
-53i27 id{30|35I9} 23|171r19
-54U14*alScaleModel 23|198s9
-55U14*alAlphaTest 23|158s7
-55i27 set_unset{30|35I9} 23|158r19
-57U13*alDrawModelTranslateRotate 23|108s10 159s7 175s7
-57i41 id{30|35I9} 23|108r37 159r34 175r34
-58f44 posx{30|64F9} 23|109r37
-58f66 posy{30|64F9} 23|110r37
-58f89 posz{30|64F9} 23|111r37 175r57
-59f44 angle{30|64F9} 23|112r37 175r71
-59f85 y{30|64F9} 23|113r37 175r88
-60i44 rotatefirst{30|35I9} 23|114r37
-60i67 billboard{30|35I9} 23|115r37
-63U15*alTranslateRotate 23|174s7
-65f44 angle{30|64F9} 23|174r26
-65f85 y{30|64F9} 23|174r53
+10f4*FACTOR_RADIANS_DEGREES{float} 23|132r34 181r34
+12R9*f3 22|45r24 24|15e17
+14f10*x{float} 23|88m25 94m28 137r78
+14f12*y{float} 23|89m25 95m28 138r78
+14f14*z{float} 23|90m25 96m28 139r78
+17R9*Position 23|19r45 24|20e17
+19r10*values{12R9} 23|88m18 89m18 90m18 94m21 95m21 96m21 137r71 138r71 139r71
+28R9*GameObject 23|6r14 7r14 8r14 9r14 22r30 24|34e17
+32i10*modelId{30|35I9} 23|67m20 68r81 71m15 73r89 75m13 76r92 78m15 79r100
+. 81m12 82r76 136r57 168r43 206r48 214r48 235r30
+33f10*scale{float} 23|72m15 73r116
+42U13*alBillBoardBegin 23|135s10
+43U13*alBillBoardEnd 23|145s10
+45U14*alPushMatrix 23|155s7 164s10 190s7 203s7
+46U14*alPopMatrix 23|170s10 175s7 208s7 210s7
+52U13*alLoadModel 23|68s9 73s7 76s7 79s7 82s7
+53U14*alDrawModel 23|168s13
+53i27 id{30|35I9} 23|168r25
+54U14*alScaleModel 23|235s9
+55U14*alAlphaTest 23|63s7
+55i27 enable{30|35I9} 23|63r19
+57U13*alDrawModelTranslateRotate 23|136s10 206s7 214s7
+57i41 id{30|35I9} 23|136r37 206r34 214r34
+58f44 posx{30|64F9} 23|137r37
+58f66 posy{30|64F9} 23|138r37
+58f89 posz{30|64F9} 23|139r37 206r57
+59f44 angle{30|64F9} 23|140r37 206r71
+59f85 y{30|64F9} 23|141r37 206r88
+60i44 rotatefirst{30|35I9} 23|142r37
+60i67 billboard{30|35I9} 23|143r37
+63U15*alTranslateRotate 23|165s13 173s10 191s7 192s7 205s7
+64f89 posz{30|64F9} 23|165r31
+65f44 angle{30|64F9} 23|173r28 191r26 192r25 205r26
+65f85 y{30|64F9} 23|173r48 192r52 205r53
+65f104 z{30|64F9} 23|191r51
 X 25 canimator.ads
 4K9*CAnimator 22|12w6 12r21 20r10 25|29e14
 8R9*CAnim 22|20r20 25|14e17
-17V13*QuadraticEaseIn{float} 23|138s22 139s22 140s22 141s22 142s22 143s22
-. 144s25
 X 26 cmd.ads
-3K9*CMD 22|3w6 3r15 23|193r20 201r20 207r20 26|49e8
-31i4*TOUCH_START{30|35I9} 23|207r24
-32i4*TOUCH_END{30|35I9} 23|201r24
-37i4*SCREENSIZE{30|35I9} 23|193r24
+3K9*CMD 22|3w6 3r15 23|230r20 238r20 244r20 26|49e8
+31i4*TOUCH_START{30|35I9} 23|244r24
+32i4*TOUCH_END{30|35I9} 23|238r24
+37i4*SCREENSIZE{30|35I9} 23|230r24
 X 27 ctimed.ads
-2K9*CTimed 22|13w6 13r18 44r20 23|41r28 41r67 27|16e11
-6R9*CTimedT 22|44r27 27|10e17
-12U14*Set 23|41s35
-13U14*Redo 23|41s74
-14V13*StepLinear{float} 23|42s19
+2K9*CTimed 22|13w6 13r18 49r20 23|53r28 53r67 27|16e11
+6R9*CTimedT 22|49r27 27|10e17
+12U14*Set 23|53s35
+13U14*Redo 23|53s74
+14V13*StepLinear{float} 23|54s19
 X 28 hittestcode.ads
-7K9*HitTestCode 22|7w6 7r23 23|212r19 28|27e16
-22V13*DoIt{integer} 23|212s31
-25r4*hitBounds{6|57R9[18]} 23|87m7 87r7 88m7 88r7 89m7 89r7 90m7 90r7 91m7
-. 91r7
+7K9*HitTestCode 22|7w6 7r23 23|255r19 28|27e16
+22V13*DoIt{integer} 23|255s31
+25r4*hitBounds{6|57R9[18]} 23|106m7 106r7 107m7 107r7 108m7 108r7 109m7 109r7
+. 110m7 110r7
 X 29 interfac.ads
-38K9*Interfaces 22|2r6 2r24 5r6 5r32 23|95r26 29|184e15
+38K9*Interfaces 22|2r6 2r24 5r6 5r32 23|122r26 29|184e15
 X 30 i-c.ads
-18K20*C 22|2w17 2r35 5r17 5r43 23|95r37 30|230e17
-35I9*int<integer> 22|25r37 25r46 25r55 23|11r23 32r27 34r15 35r15 53r77 56r82
-. 59r88 62r67 66r31 67r66 186r38 186r47 186r56
-64F9*C_float<float> 22|17r14 23r26 46r9 23|53r100 67r91 95r39 109r52 110r52
-. 111r52 164r19 164r34 164r49 174r35 198r42 198r54
+18K20*C 22|2w17 2r35 5r17 5r43 23|122r37 30|230e17
+35I9*int<integer> 22|25r37 25r46 25r55 23|11r23 39r27 41r15 42r15 67r31 68r66
+. 73r77 76r82 79r88 82r67 223r38 223r47 223r56
+64F9*C_float<float> 22|17r14 23r26 51r9 23|14r12 68r91 73r100 115r32 122r39
+. 137r52 138r52 139r52 152r19 165r39 191r35 192r34 205r35 235r42 235r54
 X 31 i-cstrin.ads
 36K22*Strings 22|5w19 5r45 31|106e25
-47P9*chars_ptr 23|18r34
-60V13*New_String{47P9} 23|19s46 20s46 21s46 22s46 23s46 24s46 25s46 26s46
-. 27s46 53s19 53s48 56s19 56s50 59s19 59s51 62s19 62s43 67s21
-X 57 text_io.ads
-24K9*Text_IO=24:29 22|10w6 10r19 23|217r7
+47P9*chars_ptr 23|25r34
+60V13*New_String{47P9} 23|26s46 27s46 28s46 29s46 30s46 31s46 32s46 33s46
+. 34s46 68s21 73s19 73s48 76s19 76s50 79s19 79s51 82s19 82s43
+X 58 text_io.ads
+24K9*Text_IO=24:29 22|10w6 10r19 23|260r7
 
