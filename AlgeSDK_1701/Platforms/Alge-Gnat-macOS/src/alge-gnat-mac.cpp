@@ -389,11 +389,13 @@ static void HandleKeyBoard( const unsigned char inKey, const int inPosX, const i
     }
   //if (inKey>='A' && inKey<='Z')   ---why restrict
   //  sendInput(CMD_KEYDOWN, inKey-49, 0);
-    sendInput(CMD_KEYDOWN, inKey, 0);
+  sendInput(CMD_KEYDOWN, inKey, 0);
 }
 
 static void HandleSpecialKey( const int inKey, const int inPosX, const int inPosY )
 {
+  sendInput(CMD_KEYDOWN, inKey, 0);
+  printf("key");
 }
 
 static void HandleMouse( const int inButton, const int inState, const int inPosX, const int inPosY )

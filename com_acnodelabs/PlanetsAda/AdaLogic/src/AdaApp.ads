@@ -19,6 +19,10 @@ package AdaApp is
    height: Standard.Integer := 0;
    can : CAnimator.CAnim;
 
+   MIN_ALLOWABLE_DISTANCE : C_float := -1.5;
+   MIN_ALLOWABLE_SPEED : C_float := 3.0;
+   NORMAL_SPEED : C_float := 10.0;
+
    procedure Init;
    procedure Update(dt : C_float);
    procedure Render;
